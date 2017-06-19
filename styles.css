@@ -1,0 +1,28 @@
+header{
+	height: 50px;
+}
+#home{
+	background-color: blue;
+}
+#about{
+	background-color: red;
+}
+#resume{
+	background-color: pink;
+}
+#skills{
+	background-color: yellow;	
+}
+#projects{
+	background-color: orange;
+}
+#hobbies{
+	background-color: purple;
+}
+div{
+	height: 500px;
+}
+footer{
+	height: 50px;
+	background-color: gray;
+}
