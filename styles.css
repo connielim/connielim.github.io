@@ -2,7 +2,15 @@ header{
 	height: 50px;
 }
 #home{
-	background-color: blue;
+	background-color: #64FFDA;
+}
+#home-image{
+	width: 100%;
+}
+div.home-half{
+	height: 100px;
+	width: 100%;
+	background-color: #90A4AE;
 }
 #about{
 	background-color: red;
@@ -20,7 +28,7 @@ header{
 	background-color: purple;
 }
 div{
-	height: 500px;
+	margin: 0px;
 }
 footer{
 	height: 50px;
