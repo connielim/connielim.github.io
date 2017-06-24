@@ -1,6 +1,29 @@
-header{
-	height: 50px;
+/*#header{
+	height: 70px;
+	background-color: black;
+	opacity: 0.9;
 }
+a.header_link{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#header_row{
+	height: 100%;
+}
+.header_link_div{
+	height: 100%;
+	position: relative;
+}
+#header_left{
+	font-size: 125%;
+}
+.header_right{
+	
+}*/
+
+
 #home{
 	background-color: #64FFDA;
 }
@@ -28,9 +51,17 @@ div.home-half{
 	background-color: purple;
 }
 div{
-	margin: 0px;
+	
 }
 footer{
 	height: 50px;
 	background-color: gray;
+}
+
+body{
+	margin: 0px;
+}
+
+a{
+	text-decoration: none;
 }
