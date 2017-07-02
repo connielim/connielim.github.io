@@ -4,6 +4,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css"/>
 		<link rel="stylesheet" href="styles.css">
 		<title>Connie Lim</title>
 	</head>	
@@ -55,63 +56,298 @@
 		<!-- end of header -->
 		
 		<div id="home">
-			<img src="img/wave4.jpg" id="home-image"></img>
+			<img src="img/winter_back2.jpg" id="home-image"></img>
 			<div id="home_description">
 				<div class="descriptions">
 					<div><p class="description"><b>Aspiring Embedded Software Developer</b></p></div>
-					<div><p class="description"><b>Amateur Kpop Dance Coverer</b></p></div>
-					<div><p class="description"><b>ISFP</b></p></div>
-					<div><p class="description"><b>Adventurous</b></p></div>
+					<div><p class="description"><b>Amateur K-pop Dance Coverer</b></p></div>
+					<div><p class="description"><b>Experienced Food Consumer</b></p></div>
+					<div><p class="description"><b>Virginia Tech Student</b></p></div>
 				 </div>
 			</div>
 		</div>
 		
-		<div id="about">
-			<h1>About</h1>
-			<div>
-				<img src="img/standing_pose2.jpg"></img>
+		<div id="about" class="container-fluid new-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 title">
+						<h2>Hi, I'm Connie!</h2>
+					</div>
+					<div class="col-md-4 about-info" id="about-image-container">
+						<img src="img/standing_pose3.jpg" id="about-image"></img>
+					</div>
+					<div class="col-md-8 about-info"> 
+						<h4>I am a student at Virginia Tech majoring in Computer Engineering.  
+						After I become an alumnus in December 2017, I hope to contribute to society by working with 
+						microcontrollers and sensors.  I’ve lived near Chinatown, LA for half of my life until I moved to 
+						Roanoke, VA where I am deprived of Asian food.  I love learning Kpop dances and eating.</h4>
+					</div>
+				</div>
 			</div>
-			<div>
-				<p>Hi!  I’m Connie and I am a student at Virginia Tech majoring in Computer Engineering.  
-				After I become an alumnus in December 2017, I hope to contribute to society by working with 
-				microcontrollers and sensors.  I’ve lived near Chinatown, LA for half of my life until I moved to 
-				Roanoke, VA where I am deprived of Asian food.  I love learning Kpop dances and eating.</p>
+		</div>
+		
+		<div id="resume" class="container-fluid new-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 title" id="resume-title">
+						<div id="resume-title-container">
+							<h1>Resume</h1>
+							<div id="resume-link-container">
+								<a href = "https://drive.google.com/file/d/0B_zXH23zO7DndlNiX3lRbzFNQk0/view" id="resume-link">
+									<i class="fa fa-download fa-2x"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-1"></div>
+					<div class="col-md-8">
+						<h2 class="resume-header">Education</h2>
+						<div class="resume-descriptions">
+							<h4>Virginia Tech</h4>
+							<p>B.S. in Computer Engineering</p>
+							<p>Expected Graduation: December 2017</p>
+						</div>
+					</div>
+					<div class="col-md-1"></div>
+					<div class="col-md-1"></div>
+				</div>	
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-1"></div>
+					<div class="col-md-8">
+						<h2 class="resume-header">Relevant Work Experiences</h2>
+						<div class="resume-descriptions">
+							<h4>LifeFuels, Summer Software Developer Intern</h4>
+							<p class="resume-indent">May-June 2016: Blah blah blah</p>
+							<p class="resume-indent">May-August 2015: Blah blah blah</p>
+						</div>
+					</div>
+					<div class="col-md-1"></div>
+					<div class="col-md-1"></div>
+				</div>
 			</div>
 		</div>
 		
-		<div id="resume">
-			<h1>Resume</h1>
-			<h2>Education</h2>
-			<ul>
-				<li>Virginia Tech</li>
-				<li>B.S. in Computer Engineering</li>
-				<li>Expected Graduation: December 2017</li>
-			</ul>
-			<h2>Relevant Work Experiences</h2>
-			<ul>
-				<li>LifeFuels, Summer Software Developer Intern</li>
-				<li>May-August 2015:</li>
-				<li>May-June 2016: </li>
-			</ul>
-			<a href = "https://drive.google.com/file/d/0B_zXH23zO7DndlNiX3lRbzFNQk0/view">Resume</a>
+		<div id="skills" class="container-fluid new-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 title">
+						<h1>Skills</h1>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-4">
+						</div>
+						<div class="col-md-4 title">
+							<div class="col-md-12">
+								<h4>Legend:</h4>
+							</div>
+							<div id="skills-rating-box">
+								<div class="skills-rating-leg">
+									<i class="fa fa-circle fa-lg"></i><span> - Beginner</span>
+								</div>
+								<div class="skills-rating-leg">
+									<i class="fa fa-cog fa-lg"></i><span> - Intermediate</span>
+								</div>
+								<div class="skills-rating-leg">
+									<i class="fa fa-cogs fa-lg"></i><span> - Advanced</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+						</div>
+					</div>
+					<div class="col-md-12" id="skills-table-container">
+						<table id="skills-table">
+						  <tr>
+							<th class="skills-table-content">Languages</th>
+							<th class="skills-table-content">Development Tools</th> 
+							<th class="skills-table-content">Operating Systems</th>
+						  </tr>
+						  <tr>
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-cogs fa-lg skills-rating"></i><span>C</span>
+								</div>
+							</td>
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-cog fa-lg skills-rating"></i><span>Visual Studio</span>
+								</div>
+							</td> 
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-cogs fa-lg skills-rating"></i><span>Windows</span>
+								</div>
+							</td>
+						  </tr>
+						  <tr>
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-cogs fa-lg skills-rating"></i><span>C++</span>
+								</div>
+							</td>
+							<td class="skills-table-content"> 
+								<div class="skills-icon-box">
+									<i class="fa fa-cog fa-lg skills-rating"></i><span>GitHub</span>
+								</div>
+							</td> 
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-cog fa-lg skills-rating"></i><span>Unix</span>
+								</div>
+							</td>
+						  </tr>
+						  <tr>
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-cog fa-lg skills-rating"></i><span>Java</span>
+								</div>
+							</td>
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-cog fa-lg skills-rating"></i><span>Eclipse</span>
+								</div>
+							</td> 
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-circle fa-lg skills-rating"></i><span>FreeRTOS</span>
+								</div>
+							</td>
+						  </tr>
+						  <tr>
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-circle fa-lg skills-rating"></i><span>MatLab</span>
+								</div>
+							</td>
+						  </tr>
+						  <tr>
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-circle fa-lg skills-rating"></i><span>HTML/CSS/JavaScript</span>
+								</div>
+							</td>
+						  </tr>
+						  <tr>
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-circle fa-lg skills-rating"></i><span>Python</span>
+								</div>
+							</td>
+						  </tr>
+						  <tr>
+							<td class="skills-table-content">
+								<div class="skills-icon-box">
+									<i class="fa fa-circle fa-lg skills-rating"></i><span>Shell Scripting</span>
+								</div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			</div>
 		</div>
 		
-		<div id="skills">
-		<h1>Skills</h1>
-		C, C++, Java, Python, MatLab, Git, HTML/CSS
+		<div id="projects" class="container-fluid new-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 title">
+						<h1>Projects</h1>
+					</div>
+					<div>
+						<a class="project-links" href="lifefuels-projects.html">
+							<div class="col-md-4 proj-card-cont">
+								<div class="project-card" >
+									<div class="col-md-12 project-logo-container">
+										<img src="img/lf_logo.svg" class="projects-logo"></img>
+									</div>
+									<div class="col-md-12 projects-descriptions">
+										<h2>LifeFuels Website/Lentil Writer</h2>
+										<p>Blah Blah blah blah</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="project-links" href="embedded-project.html">
+							<div class="col-md-4 proj-card-cont">
+								<div class="project-card">
+									<div class="col-md-12 project-logo-container">
+										<img src="img/Virginia_Tech_logo.png" class="projects-logo"></img>
+									</div>
+									<div class="col-md-12 projects-descriptions">
+										<h2>Embedded Project</h2>
+										<p>Blah Blah blah blah</p>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="project-links" href="senior-design.html">
+							<div class="col-md-4 proj-card-cont">
+								<div class="project-card">
+									<div class="col-md-12 project-logo-container">
+										<div class="projects-logos-2">
+											<img src="img/Virginia_Tech_logo.png" style="width: 80%"></img>
+											<img src="img/ge_logo.jpg" style="width: 90%"></img>
+										</div>
+									</div>
+									<div class="col-md-12 projects-descriptions">
+										<h2>Senior Design Project</h2>
+										<p>Blah Blah blah blah</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
 		</div>
 		
-		<div  id="projects">
-		<h1>Projects</h1>
-		lifefuels website, lifefuels lentil writer, embedded project, senior design project
-		<img src="img/General_Electric_logo.png"></img>
-		<img src="img/lf_logo.svg"></img>
-		<img src="img/Virginia_Tech_logo.png"></img>
-		</div>
-		
-		<div id="hobbies">
-		<h1>Hobbies</h1>
-		Dancing, Korea, Traveling 
+		<div id="hobbies" class="container-fluid new-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 title">
+						<h1>Hobbies</h1>
+					</div>
+					<a href="dancing.html">
+						<div class="col-md-4">
+							<div class="col-md-4 col-sm-4 col-xs-4 hobbies-icon"> 
+								<i class="fa fa-child fa-4x hobby-icon"></i>
+							</div>
+							<div class="col-md-8 col-sm-8 col-xs-8" id="hobby-descrip-cont1">
+								<h3>Dancing</h3>
+								<p>Blah Blah Blah Blah Blah</p>
+							</div>
+						</div>
+					</a>
+					<a href="korea.html"> 
+						<div class="col-md-4">
+							<div class="col-md-4 col-sm-4 col-xs-4 hobbies-icon">
+								<i class="fa fa-krw fa-4x hobby-icon"></i>
+							</div>
+							<div class="col-md-8 col-sm-8 col-xs-8" id="hobby-descrip-cont2">
+								<h3>Korea</h3>
+								<p>Blah Blah Blah Blah Blah</p>
+							</div>
+						</div>
+					</a>
+					<a href="traveling.html">
+						<div class="col-md-4">
+							<div class="col-md-4 col-sm-4 col-xs-4">
+								<div class="hobbies-icon">
+									<i class="fa fa-plane fa-4x hobby-icon"></i>
+								</div>
+							</div>
+							<div class="col-md-8 col-sm-8 col-xs-8" id="hobby-descrip-cont3">
+								<h3>Traveling</h3>
+								<p>Blah Blah Blah Blah Blah</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
 		</div>
 		
 		<footer>
@@ -140,6 +376,30 @@
 					autoplaySpeed: 2500,
 					fade: true,
 				});
+				
+				var hobbyDescrip1 = $('#hobby-descrip-cont1').height();
+				var hobbyDescrip2 = $('#hobby-descrip-cont2').height();
+				var hobbyDescrip3 = $('#hobby-descrip-cont3').height();
+				
+				var hobbymax1, hobbymax;
+				
+				if(hobbyDescrip1 > hobbyDescrip2){
+					hobbymax1 = hobbyDescrip1;
+				}
+				else{
+					hobbymax1 = hobbyDescrip2;
+				}
+				
+				if(hobbyDescrip3 > hobbymax1){
+					hobbymax = hobbyDescrip3;
+				}
+				else{
+					hobbymax = hobbymax1;
+				}
+				
+				$('.hobbies-icon').css('height', hobbymax + 'px');
+				$('#skills-table-container').css('height', $('#skills-table').height() + 'px');
+				$('#resume-title').css('height', $('#resume-title-container').height() + 'px');
 			});
 		</script>
 	</body>

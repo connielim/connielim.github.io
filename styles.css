@@ -23,7 +23,6 @@ a.header_link{
 	
 }*/
 
-
 #home{
 	background-color: #64FFDA;
 	position: relative;
@@ -42,38 +41,141 @@ a.header_link{
 	width: 100%;
 }
 .description{
-	color: white;
-	font-size: 200%;
+	color: black;
+	font-size: 250%;
 }
 
 
 #about{
 	background-color: red;
+	
 }
+#about-image{
+	width: 80%;
+}
+#about-image-container{
+	text-align: center;
+}
+.about-info{
+	margin-top: 15px;
+}
+
 #resume{
 	background-color: pink;
 }
+#resume-title-container{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: -webkit-box;
+}
+#resume-link{
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+#resume-link-container{
+	position: relative;
+	margin-left: 10px;
+}
+.resume-header{
+	border-style: solid none solid none;
+	padding: 10px 0px 10px 20px;
+	display: -webkit-box;
+}
+.resume-descriptions{
+	margin-left: 50px;
+}
+.resume-indent{
+	margin-left: 25px;
+}
+
 #skills{
 	background-color: yellow;	
 }
+#skills-rating-box{
+	display: -webkit-inline-box;
+}
+.skills-rating{
+	margin-right: 10px;
+}
+.skills-rating-leg{
+	margin-right: 15px;
+}
+.skills-icon-box{
+	margin-bottom: 10px;
+}
+#skills-table-container{
+	position: relative;
+	margin-top: 25px;
+}
+#skills-table{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.skills-table-content{
+	padding-right: 25px;
+}
+
 #projects{
 	background-color: orange;
 }
+.project-card{
+	background-color: white; 
+	text-align: center; 
+	height: 450px;
+}
+.project-logo-container{
+	position: relative;
+	height: 50%;
+}
+.projects-logo{
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.projects-logos-2{
+	position: absolute;
+	top: 50%;
+	transform: translate(0%, -50%);
+}
+.projects-descriptions{
+	height: 50%;
+	background-color: gray;
+}
+.proj-card-cont{
+	margin-bottom: 40px;
+}
+
 #hobbies{
-	background-color: purple;
+	background-color: #26C6DA;
 }
-div{
-	
+.hobbies-icon{
+	text-align: center;
+	position: relative;
 }
+.hobby-icon{
+	position: relative;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
 footer{
 	height: 50px;
 	background-color: gray;
 }
-
 body{
 	margin: 0px;
 }
-
 a{
 	text-decoration: none;
+}
+.title{
+	text-align: center;
+}
+.new-container{
+	padding-top: 45px;
+	padding-bottom: 45px;
 }
