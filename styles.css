@@ -182,9 +182,11 @@
 
 /* End of Dancing Page */
 
+
 /* Global */
 footer{
-	height: 50px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 	background-color: gray;
 }
 body{
@@ -193,7 +195,7 @@ body{
 a{
 	text-decoration: none;
 }
-.title{
+.title, .footer-section{
 	text-align: center;
 }
 .new-container{
