@@ -1,34 +1,7 @@
-/*#header{
-	height: 70px;
-	background-color: black;
-	opacity: 0.9;
-}
-a.header_link{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-#header_row{
-	height: 100%;
-}
-.header_link_div{
-	height: 100%;
-	position: relative;
-}
-#header_left{
-	font-size: 125%;
-}
-.header_right{
-	
-}*/
-
+/* Main Page */
 #home{
 	background-color: #64FFDA;
 	position: relative;
-}
-#home-image{
-	width: 100%;
 }
 #home_description{
 	position: absolute;
@@ -44,7 +17,6 @@ a.header_link{
 	color: black;
 	font-size: 250%;
 }
-
 
 #about{
 	background-color: red;
@@ -161,7 +133,56 @@ a.header_link{
 	top: 50%;
 	transform: translate(0, -50%);
 }
+/* End of Main Page */
 
+/* Dancing Page */
+#dancing-cover-row, #dancing-star-container{
+	position:relative;
+}
+#dancing-reason{
+	background-color: yellow;
+}
+#dancing-skill{
+	background-color: pink;
+}
+#dancing-me{
+	background-color: orange;
+}
+#dancing-others{
+	background-color: green;
+}
+.dancing-row, #dancing-reason-des{
+	text-align: center;
+}
+#dancing-star, #dancing-heading-cont{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#dancing-honing-title{
+	margin-top: 0px;
+}
+.dancing-others-img-cont{
+	background-color: white;
+	position: relative;
+}
+.dancing-others-img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#dancing-heading{
+	color: white;
+}
+#dancing-heading-cont{
+	z-index: 3;
+}
+
+/* End of Dancing Page */
+
+/* Global */
 footer{
 	height: 50px;
 	background-color: gray;
@@ -178,4 +199,19 @@ a{
 .new-container{
 	padding-top: 45px;
 	padding-bottom: 45px;
+}
+.intro-image{
+	width: 100%;
+}
+.black-transparent-cover{
+	background-color: black;
+	opacity: 0.5;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+.eighty-image{
+	width: 80%;
 }
