@@ -173,14 +173,25 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-#dancing-heading{
-	color: white;
+/* End of Dancing Page */
+
+/* Korea Page */
+.korea-slider-imgs{
+	width: 90%;
 }
-#dancing-heading-cont{
-	z-index: 3;
+#korea-slider-cont{
+	background-color: yellow;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+#korea-heading-cont{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-/* End of Dancing Page */
+/* End of Korea Page */
 
 
 /* Global */
@@ -213,6 +224,15 @@ a{
 	top: 0;
 	left: 0;
 	
+}
+.black-cover-row{
+	position: relative;
+}
+.cover-heading-index{
+	z-index: 3;
+}
+.cover-heading{
+	color: white;
 }
 .eighty-image{
 	width: 80%;
