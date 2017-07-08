@@ -176,6 +176,18 @@
 /* End of Dancing Page */
 
 /* Korea Page */
+#korea-intro{
+	background-color: pink;
+}
+#korea-entertainment{
+	background-color: yellow;
+}
+#korea-korean{
+	background-color: orange;
+}
+#korea-study-abroad{
+	background-color: pink;
+}
 .korea-slider-imgs{
 	width: 90%;
 }
@@ -189,6 +201,18 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+#korea-kpop{
+	background-color: #26C6DA;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+#korea-kdrama{
+	background-color: #26C6DA;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 /* End of Korea Page */
 
@@ -237,7 +261,7 @@ body{
 a{
 	text-decoration: none;
 }
-.title, .footer-section{
+.title, .footer-section, .center-div{
 	text-align: center;
 }
 .new-container{
@@ -257,7 +281,7 @@ a{
 	width: 100%;
 	
 }
-.black-cover-row{
+.black-cover-row, .relative-div{
 	position: relative;
 }
 .cover-heading-index{
@@ -266,6 +290,6 @@ a{
 .cover-heading{
 	color: white;
 }
-.eighty-image{
+.eighty-image, .eighty-div{
 	width: 80%;
 }
