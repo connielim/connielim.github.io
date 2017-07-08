@@ -53,10 +53,56 @@
 		</nav>
 		<!-- end of header -->
 
-		<div>
-			<h1>Traveling</h1>
-			<img src="img/world_map.png"></img>
-			<p>I love trying new things; it’s not a surprise that I love learning about new culture and trying different foods.  As a child, I didn’t travel a lot, even inside the US, because we didn’t have time.  I really cherish being able to travel around the world easily because of that.  The countries filled in red are the countries I have visited.  Before I kick the bucket, I hope the map won’t have any white spots.</p>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 black-cover-row">
+					<img src="img/world_map.png" class="intro-image"></img>
+					<div class="cover-heading-index" id="traveling-heading-cont">
+						<h1 class="cover-heading" id="traveling-heading">Traveling</h1>
+					</div>
+					<div class="col-md-12 black-transparent-cover" id="traveling-black-cover"></div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid" id="traveling-new">
+			<div class="container">
+				<div class="row dancing-row">
+					<div class="col-md-12">
+						<h3 id="traveling-honing-title">Honing a Skill</h3>
+						<p>Even though dancing is a hobby, it has also honed my observation and perfection skill.  Dancing has taught me to perfect the position of every body part of each move such as the angle, how far out the arm should be, how much energy should be put into it, and so much more.  A successful dance cover to me is when you place your dance cover and the original dance side by side and notice little to no difference between the two.  </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid" id="traveling-perspective">
+			<div class="container">
+				<div class="row dancing-row">
+					<div class="col-md-12">
+						<h3 id="traveling-perspective-title">Honing a Skill</h3>
+						<p>Even though dancing is a hobby, it has also honed my observation and perfection skill.  Dancing has taught me to perfect the position of every body part of each move such as the angle, how far out the arm should be, how much energy should be put into it, and so much more.  A successful dance cover to me is when you place your dance cover and the original dance side by side and notice little to no difference between the two.  </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid" id="traveling-unique">
+			<div class="container">
+				<div class="row dancing-row">
+					<div class="col-md-12">
+						<h3 id="traveling-unique-title">Honing a Skill</h3>
+						<p>Even though dancing is a hobby, it has also honed my observation and perfection skill.  Dancing has taught me to perfect the position of every body part of each move such as the angle, how far out the arm should be, how much energy should be put into it, and so much more.  A successful dance cover to me is when you place your dance cover and the original dance side by side and notice little to no difference between the two.  </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid" id="traveling-goal">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h3 id="traveling-goal-title">Honing a Skill</h3>
+						<p>Even though dancing is a hobby, it has also honed my observation and perfection skill.  Dancing has taught me to perfect the position of every body part of each move such as the angle, how far out the arm should be, how much energy should be put into it, and so much more.  A successful dance cover to me is when you place your dance cover and the original dance side by side and notice little to no difference between the two.  </p>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<footer>
@@ -86,5 +132,21 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<script  type="text/javascript">
+			$(document).ready(function(){
+				var coverHeight = ($(window).width() - 30) * 619;
+				coverHeight = coverHeight / 1260;
+				$('#traveling-black-cover').css('height', coverHeight + 'px');
+				
+				$( window ).resize(function() {
+					var coverHeight = ($(window).width() - 30) * 619;
+					coverHeight = coverHeight / 1260;
+					
+					$('#traveling-black-cover').css('height', coverHeight + 'px');
+					$('#traveling-black-cover').css('width', '100%');
+				});
+			});
+		</script>	
 	</body>
 </html>

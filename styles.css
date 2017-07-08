@@ -190,9 +190,40 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-
 /* End of Korea Page */
 
+/* Traveling Page */
+#traveling-heading-cont{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#traveling-new{
+	background-color: pink;
+}
+#traveling-perspective{
+	background-color: yellow;
+}
+#traveling-unique{
+	background-color: green;
+}
+#traveling-goal{
+	background-color: orange;
+}
+#traveling-honing-title{
+	background-color: white;
+}
+#traveling-perspective-title{
+	background-color: orange;
+}
+#traveling-unique-title{
+	background-color: pink;
+}
+#traveling-goal-title{
+	
+}
+/* End of Traveling Page */
 
 /* Global */
 footer{
@@ -223,6 +254,7 @@ a{
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
 	
 }
 .black-cover-row{
