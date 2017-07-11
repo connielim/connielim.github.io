@@ -298,6 +298,51 @@
 }
 /* End of Embedded Page */
 
+/* Senior Design Page */
+#senior-cover-div{
+	height: 100vh;
+	background-color: red;
+	position: relative;
+}
+#senior-heading-cont{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.senior-cover-img{
+	width: 90%;
+}
+#senior-cover-imgs-cont{
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	transform: translate(0%, -50%);
+}	
+#senior-class{
+	background-color: red;
+}
+#senior-problem{
+	background-color: orange;
+}
+#senior-solution{
+	background-color: yellow;
+}
+#senior-solution-check{
+	position: relative;
+}
+#senior-solution-check-des{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#senior-image:hover{
+	content:url(img/senior_design_funny.jpg);
+}
+/* End of Senior Design Page */
+
 /* Global */
 footer{
 	padding-top: 10px;
