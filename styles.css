@@ -249,6 +249,55 @@
 }
 /* End of Traveling Page */
 
+/* Embedded Project Page */
+#embedded-cover-div{
+	height: 100vh;
+	background-color: red;
+	position: relative;
+}
+#embedded-cover-img{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+}
+#embedded-heading-cont{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+#embedded-class{
+	background-color: yellow; 
+}
+#embedded-problem{
+	background-color: orange;
+}
+#embedded-grabber{
+	background-color: red;
+}
+#embedded-solution{
+	background-color: pink;
+}
+#embedded-solution-info{
+	text-align: center;
+}
+#embedded-solution-img{
+	width: 90%;
+	opacity: 0.5;
+	position: relative;
+}
+#embedded-solution-check{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+/* End of Embedded Page */
+
 /* Global */
 footer{
 	padding-top: 10px;
