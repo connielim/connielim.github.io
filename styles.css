@@ -343,6 +343,46 @@
 }
 /* End of Senior Design Page */
 
+/* LifeFuels Page */
+#lifefuels-cover-div{
+	height: 100vh;
+	background-color: red;
+	position: relative;
+}
+#lifefuels-heading-cont{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+#lifefuels-cover-img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 95%;
+}
+#lifefuels-lentil{
+	background-color: orange;
+}
+#lifefuels-website{
+	background-color: pink;
+}
+#lifefuels-lentil-about{
+	background-color: red;
+}
+#lifefuels-lentil-product{
+	background-color: #64FFDA;
+}
+#lifefuels-website-about{
+	background-color: red;
+}
+#lifefuels-website-product{
+	background-color: #64FFDA;
+}
+/* End of LifeFuels Page */
+
 /* Global */
 footer{
 	padding-top: 10px;

@@ -53,15 +53,52 @@
 		</nav>
 		<!-- end of header -->
 
-		<img src="img/lf_logo.svg"></img>
-		<div>
-			<h3>Website</h3>
-			<p>For the summer after my sophomore year, I interned at LifeFuels.  During my internship, I developed a couple of pages for the company.  I first helped develop the team page for the pre-order site.  </p>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 black-cover-row">
+					<div class="col-md-12" id="lifefuels-cover-div">
+						<img src="img/lf_logo.svg" id="lifefuels-cover-img"></img>
+					</div>
+					<div class="cover-heading-index" id="lifefuels-heading-cont">
+						<h1 class="cover-heading" id="lifefuels-heading">LifeFuels Internship</h1>
+					</div>
+					<div class="col-md-12 black-transparent-cover" id="lifefuels-black-cover"></div>
+				</div>
+			</div>
 		</div>
-		
-		<div>
-			<h3>Lentil</h3>
-			<p>Derp</p>
+		<div class="container-fluid" id="lifefuels-lentil">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 title">
+						<h3>Lentil</h3>
+					</div>
+					<div class="col-md-12" id="lifefuels-lentil-about">
+						<h3>About</h3>
+						<p>Blah</p>
+					</div>
+					<div class="col-md-12" id="lifefuels-lentil-product">
+						<h3>End Product</h3>
+						<p>Blah</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid" id="lifefuels-website">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 title">
+						<h3>Website</h3>
+					</div>
+					<div class="col-md-12" id="lifefuels-website-about">
+						<h3>About</h3>
+						<p>Blah</p>
+					</div>
+					<div class="col-md-12" id="lifefuels-website-product">
+						<h3>End Product</h3>
+						<p>Blah</p>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<footer>
@@ -93,5 +130,15 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<script  type="text/javascript">
+			$(document).ready(function(){
+				$('#lifefuels-black-cover').css('height', $('#lifefuels-cover-div').height() + 'px');
+				
+				$( window ).resize(function() {
+					$('#lifefuels-black-cover').css('height', $('#lifefuels-cover-div').height() + 'px');
+				});
+			});
+		</script>	
 	</body>
 </html>
