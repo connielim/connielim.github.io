@@ -1,6 +1,5 @@
 /* Main Page */
 #home{
-	background-color: #64FFDA;
 	position: relative;
 }
 #home_description{
@@ -14,16 +13,16 @@
 	width: 100%;
 }
 .description{
-	color: black;
+	color: #F5F5F5;
 	font-size: 250%;
 }
 
 #about{
-	background-color: red;
+	background-color: #62727b;
 	
 }
 #about-image{
-	width: 80%;
+	border-radius: 10px;
 }
 #about-image-container{
 	text-align: center;
@@ -33,7 +32,7 @@
 }
 
 #resume{
-	background-color: pink;
+	background-color: #CFD8DC;
 }
 #resume-title-container{
 	position: absolute;
@@ -61,9 +60,12 @@
 .resume-indent{
 	margin-left: 25px;
 }
+.resume-detail-fsize{
+	font-size: 15px;
+}
 
 #skills{
-	background-color: yellow;	
+	background-color: #78909C;	
 }
 #skills-rating-box{
 	display: -webkit-inline-box;
@@ -81,17 +83,21 @@
 	position: relative;
 	margin-top: 25px;
 }
-#skills-table{
+#skills-table-div{
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, 0);
 }
+.skills-table-header{
+	font-size: 20px;
+}
 .skills-table-content{
 	padding-right: 25px;
+	padding-bottom: 10px;
 }
 
 #projects{
-	background-color: orange;
+	background-color: #37464f;
 }
 .project-card{
 	background-color: white; 
@@ -100,7 +106,7 @@
 }
 .project-logo-container{
 	position: relative;
-	height: 50%;
+	height: 60%;
 }
 .projects-logo{
 	width: 80%;
@@ -114,15 +120,25 @@
 	transform: translate(0%, -50%);
 }
 .projects-descriptions{
-	height: 50%;
-	background-color: gray;
+	height: 40%;
+	background-color: #004c8c;
+	color: #fafafa;
+	padding-top: 10px;
+}
+#projects-title{
+	color: #fafafa;
+	padding-bottom: 20px;
+}
+.projects-descriptions:hover{
+	color: #58a5f0;
+	text-decoration: none;
 }
 .proj-card-cont{
 	margin-bottom: 40px;
 }
 
 #hobbies{
-	background-color: #26C6DA;
+	background-color: #62717b;
 }
 .hobbies-icon{
 	text-align: center;
@@ -132,6 +148,12 @@
 	position: relative;
 	top: 50%;
 	transform: translate(0, -50%);
+}
+.hobbies-link, #hobbies-title{
+	color: #333;
+}
+.hobbies-link:hover{
+	color: #004c8c;
 }
 /* End of Main Page */
 
@@ -383,11 +405,52 @@
 }
 /* End of LifeFuels Page */
 
-/* Global */
+/* Global Section*/
+.navbar{
+	background-color: #102027;
+	border-color: #102027;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.navbar-default .navbar-brand{
+	color: white;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover{
+	color: #58a5f0;
+}
+
+.navbar-default .navbar-nav .dropdown .dropdown-toggle:hover, 
+.navbar-default .navbar-nav .dropdown .dropdown-toggle[aria-expanded="true"]{
+	background-color: black;
+	color: #58a5f0;
+}
+
+.navbar-default .navbar-nav .dropdown-toggle:visited,
+.navbar-default .navbar-nav > li > a{
+	color: white;
+	opacity: 0.9;
+}
+
+.navbar-default .navbar-nav .open > a:focus{
+	background-color: #004c8c;
+	color: #FAFAFA;
+}
+
+.navbar-default .navbar-nav .dropdown-menu > li > a:hover{
+	color: #0277bd;
+}
 footer{
 	padding-top: 10px;
 	padding-bottom: 5px;
-	background-color: gray;
+	background-color: #424242;
+}
+footer a, footer span{
+	color: #fafafa;
+	opacity: 0.85;
+}
+footer a:hover{
+	color: #0277bd;
 }
 body{
 	margin: 0px;
