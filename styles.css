@@ -274,7 +274,7 @@
 /* Embedded Project Page */
 #embedded-cover-div{
 	height: 100vh;
-	background-color: red;
+	background-color: #62727b;
 	position: relative;
 }
 #embedded-cover-img{
@@ -292,23 +292,25 @@
 	text-align: center;
 }
 #embedded-class{
-	background-color: yellow; 
+	background-color: #37474f; 
+	color: #fafafa;
 }
 #embedded-problem{
-	background-color: orange;
+	background-color: #62727b;
 }
 #embedded-grabber{
-	background-color: red;
+	background-color: #37474f;
+	color: #fafafa;
 }
 #embedded-solution{
-	background-color: pink;
+	background-color: #62727b;
 }
 #embedded-solution-info{
 	text-align: center;
 }
 #embedded-solution-img{
 	width: 90%;
-	opacity: 0.5;
+	opacity: 0.3;
 	position: relative;
 }
 #embedded-solution-check{
@@ -317,6 +319,28 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+	color: white;
+	width: 70%;
+}
+.embedded-button{
+	padding-left: 30px;
+	padding-right: 30px;
+	background-color: #58a5f0;
+	border: #58a5f0;
+	border-style: solid;
+	border-width: 2px;
+	margin-top: 10px;
+	font-size: 15px;
+}
+.embedded-titles{
+	border-style: solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    padding-bottom: 5px;
+}
+.embedded-section-title{
+	margin-bottom: 18px;
 }
 /* End of Embedded Page */
 
@@ -489,4 +513,11 @@ a{
 }
 .eighty-image, .eighty-div{
 	width: 80%;
+}
+.outer-cover-div{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.twenty-font-size{
+	font-size: 20px;
 }
