@@ -198,10 +198,6 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.cover-div{
-	padding-left: 0px;
-	padding-right: 0px;
-}
 .dancing-vid-div{
 	margin-top: 15px;
 }
@@ -209,24 +205,28 @@
 
 /* Korea Page */
 #korea-intro{
-	background-color: pink;
+	background-color: #62727b;
 }
 #korea-entertainment{
-	background-color: yellow;
+	background-color: #37474f;
+	color: #fafafa;
 }
 #korea-korean{
-	background-color: orange;
+	background-color: #62727b;
+	background-image: url("img/letters3.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: #fafafa;
 }
 #korea-study-abroad{
-	background-color: pink;
+	background-color: #37474f;
+	color: #fafafa;
 }
 .korea-slider-imgs{
 	width: 90%;
 }
 #korea-slider-cont{
-	background-color: yellow;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	background-color: #62727b;
 }
 #korea-heading-cont{
 	position: absolute;
@@ -235,16 +235,24 @@
 	transform: translate(-50%, -50%);
 }
 #korea-kpop{
-	background-color: #26C6DA;
+	background-color: #F5F5F5;
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, 0);
+	color: #212121;
 }
 #korea-kdrama{
-	background-color: #26C6DA;
+	background-color: #F5F5F5;
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, 0);
+	color: #212121;
+}
+#kpop-div{
+	margin-top: 20px;
+}
+#kdrama-div{
+	margin-top: 20px;
 }
 /* End of Korea Page */
 
@@ -530,4 +538,11 @@ a{
 }
 .twenty-font-size{
 	font-size: 20px;
+}
+.cover-div{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.fifteen-font-size{
+	font-size: 15px;
 }

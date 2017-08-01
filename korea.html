@@ -57,7 +57,7 @@
 		
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-12 black-cover-row">
+				<div class="col-md-12 black-cover-row cover-div">
 					<img src="img/peace.jpg" class="intro-image"></img>
 					<div class="cover-heading-index" id="korea-heading-cont">
 						<h1 class="cover-heading" id="korea-heading">Korea</h1>
@@ -66,18 +66,18 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid" id="korea-intro">
+		<div class="container-fluid new-container" id="korea-intro">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 center-div">
 						<i class="fa fa-heart-o fa-4x"></i>
 						<h2>I love Korea.</h2>
-						<p>Blah blah blah</p>
+						<p class="fifteen-font-size">Blah blah blah</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid" id="korea-entertainment">
+		<div class="container-fluid new-container" id="korea-entertainment">
 			<div class="container">
 				<div class="row center-div">
 					<div class="col-md-12">
@@ -87,42 +87,42 @@
 						<div class="eighty-div" id="korea-kpop">
 							<i class="fa fa-music fa-4x"></i>
 							<h3>K-pop</h3>
-							<p>Blah blha blhlhfl</p>
+							<p class="fifteen-font-size">Blah blha blhlhfl</p>
 						</div>
 					</div>
 					<div class="col-md-6 relative-div" id="kdrama-div">
 						<div class="eighty-div" id="korea-kdrama">
 							<i class="fa fa-television fa-4x"></i>
 							<h3>K-dramas</h3>
-							<p>Blah blha blhlhfl</p>
+							<p class="fifteen-font-size">Blah blha blhlhfl</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid" id="korea-korean">
+		<div class="container-fluid new-container" id="korea-korean">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 center-div">
+					<div class="col-md-12">
 					<h2>Korean</h2>
-					<p>blah blah blah</p>
-					<p>한국어 써주세요</p>
+					<p class="fifteen-font-size">blah blah blah</p>
+					<p class="fifteen-font-size">한국어 써주세요</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid" id="korea-study-abroad">
+		<div class="container-fluid new-container" id="korea-study-abroad">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 center-div">
 						<i class="fa fa-book fa-4x"></i>
 						<h2>Studying Abroad</h2>
-						<p>Blah blah blah</p>
+						<p class="fifteen-font-size">Blah blah blah</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid" id="korea-slider-cont">
+		<div class="container-fluid new-container" id="korea-slider-cont">
 			<div class="bob" id="korea-img-div">
 				<div><img src="img/yonsei_main_gate.jpg" class="korea-slider-imgs"></img></div>
 				<div><img src="img/angel.jpg" class="korea-slider-imgs"></img></div>
@@ -217,14 +217,14 @@
 					  ]
 			    });
 	            
-				var coverHeight = ($(window).width() - 30) * 9;
+				var coverHeight = $(window).width() * 9;
 				coverHeight = coverHeight / 16;
 				$('#korea-black-cover').css('height', coverHeight + 'px');	
 				$('#kpop-div').css('height', $('#korea-kpop').height() + 'px');	
 				$('#kdrama-div').css('height', $('#korea-kdrama').height() + 'px');	
 				
 				$( window ).resize(function() {
-					var coverHeight = ($(window).width() - 30) * 9;
+					var coverHeight = $(window).width() * 9;
 					coverHeight = coverHeight / 16;
 					
 					$('#korea-black-cover').css('height', coverHeight + 'px');
