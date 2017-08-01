@@ -162,16 +162,18 @@
 	position:relative;
 }
 #dancing-reason{
-	background-color: yellow;
+	background-color: #37474f;
+	color: #fafafa;
 }
 #dancing-skill{
-	background-color: pink;
+	background-color: #62727b;
 }
 #dancing-me{
-	background-color: orange;
+	background-color: #37474f;
+	color: white;
 }
 #dancing-others{
-	background-color: green;
+	background-color: #62727b;
 }
 .dancing-row, #dancing-reason-des{
 	text-align: center;
@@ -188,12 +190,20 @@
 .dancing-others-img-cont{
 	background-color: white;
 	position: relative;
+	margin-top: 20px;
 }
 .dancing-others-img{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+.cover-div{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.dancing-vid-div{
+	margin-top: 15px;
 }
 /* End of Dancing Page */
 
