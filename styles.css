@@ -264,25 +264,30 @@
 	transform: translate(-50%, -50%);
 }
 #traveling-new{
-	background-color: pink;
+	background-color: #37474f;
+	color: #fafafa;
 }
 #traveling-perspective{
-	background-color: yellow;
+	background-color: #62727b;
 }
 #traveling-unique{
-	background-color: green;
+	background-color: #37474f;
+	color: #fafafa;
 }
 #traveling-goal{
-	background-color: orange;
+	background-color: #62727b;
 }
 #traveling-honing-title{
-	background-color: white;
+	background-color: #fafafa;
+	color: #37474f;
 }
 #traveling-perspective-title{
-	background-color: orange;
+	background-color: #fafafa;
+	color: #37474f;
 }
 #traveling-unique-title{
-	background-color: pink;
+	background-color: #fafafa;
+	color: #37474f;
 }
 #traveling-goal-title{
 	
@@ -545,4 +550,8 @@ a{
 }
 .fifteen-font-size{
 	font-size: 15px;
+}
+.ten-padding{
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
