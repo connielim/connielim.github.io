@@ -4,17 +4,23 @@
 }
 #home_description{
 	position: absolute;
-	top: 75%;
+	top: 65%;
 	left: 50%;
-	transform: translate(-50%, -25%);
+	transform: translate(-50%, -35%);
 	text-align: center;
 }
 #home_description{
 	width: 100%;
 }
 .description{
-	color: #F5F5F5;
-	font-size: 250%;
+	font-size: 20px;
+	padding-top: 20px;
+}
+#home-name{
+	font-size: 500%;
+	color: #fafafa;
+	font-family: arial;
+	opacity: 0.95;
 }
 
 #about{
@@ -456,8 +462,8 @@
 .navbar{
 	background-color: #102027;
 	border-color: #102027;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .navbar-default .navbar-brand{
 	color: white;

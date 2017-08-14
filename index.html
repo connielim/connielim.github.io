@@ -60,12 +60,9 @@
 				<img src="img/walking_grad.jpg" class="intro-image" id="main-cover-image"></img>
 				<div class="col-md-12 black-transparent-cover" id="main-black-cover"></div>
 				<div id="home_description" class="cover-heading-index" >
-					<div class="descriptions">
-						<div><p class="description"><b>Aspiring Embedded Software Developer</b></p></div>
-						<div><p class="description"><b>Amateur K-pop Dance Coverer</b></p></div>
-						<div><p class="description"><b>Professional Food Gobbler</b></p></div>
-						<div><p class="description"><b>Virginia Tech Student</b></p></div>
-					 </div>
+					<div class="col-lg-1 col-xl-1"></div>
+					<div class="col-lg-10 col-xl-10"><h1 id="home-name"></h1></div>
+					<div class="col-lg-1 col-xl-1"></div>
 				</div>
 			</div>
 		</div>
@@ -73,17 +70,23 @@
 		<div id="about" class="container-fluid new-container">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4 about-info" id="about-image-container">
+					<div class="col-md-4 col-sm-5 about-info" id="about-image-container">
 						<img src="img/standing_pose3.jpg" class="eighty-image" id="about-image"></img>
 					</div>
-					<div class="col-md-7 about-info title"> 
+					<div class="col-md-7 col-sm-7 about-info title"> 
 						<h2>Hi, I'm Connie!</h2>
 						<h4>I am a student at Virginia Tech majoring in Computer Engineering.  It makes me happy to combine 
 						software and hardware to solve problems and I hope to use that to make the world a better
 						place to live in. Some random facts about me: my close friends would describe me as eccentric, but in a good way; 
 						I love trying new things - especially food; and I have at least five unique face expressions.</h4>
+						<div class="descriptions">
+							<div><p class="description"><b>Aspiring Embedded Software Developer</b></p></div>
+							<div><p class="description"><b>Amateur K-pop Dance Coverer</b></p></div>
+							<div><p class="description"><b>Professional Food Gobbler</b></p></div>
+							<div><p class="description"><b>Virginia Tech Student</b></p></div>
+						 </div>
 					</div>
-					<div class="col-md-1"></div>
+					<div class="col-md-1 "></div>
 				</div>
 			</div>
 		</div>
@@ -96,7 +99,7 @@
 							<h1>Resume</h1>
 							<div id="resume-link-container">
 								<a href = "https://drive.google.com/file/d/0B_zXH23zO7DndlNiX3lRbzFNQk0/view" id="resume-link">
-									<i class="fa fa-download fa-2x"></i>
+									<i class="fa fa-search-plus fa-2x"></i>
 								</a>
 							</div>
 						</div>
@@ -403,6 +406,7 @@
 					autoplay: true,
 					autoplaySpeed: 2500,
 					fade: true,
+					arrows: false,
 				});
 				
 				var hobbyDescrip1 = $('#hobby-descrip-cont1').height();
@@ -431,12 +435,47 @@
 
 				$('#main-black-cover').css('height', $('#main-cover-image').height() + 'px');
 				
+				if( $(window).width() >= 768 ){
+					$('#home-name').text('Always be a work in progress - Emily Lillian');
+				}
+				else{
+					$('#home-name').text('Connie Lim');
+				}
+				
 				$( window ).resize(function() {
 					$('#main-black-cover').css('height', $('#main-cover-image').height() + 'px');
 					$('.hobbies-icon').css('height', hobbymax + 'px');
 					$('#skills-table-container').css('height', $('#skills-table-div').height() + 'px');
 					$('#resume-title').css('height', $('#resume-title-container').height() + 'px');
+					
+					if( $(window).width() >= 768 ){
+						$('#home-name').text('Always be a work in progress - Emily Lillian');
+					}
+					else{
+						$('#home-name').text('Connie Lim');
+					}
 				});
+				
+				if($('.navbar').offset().top <= $('#main-cover-image').height()){
+					$('.navbar').css('background-color', 'transparent');
+					$('.navbar').css('border-color', 'transparent');
+				}
+				else{
+					$('.navbar').css('background-color', '#102027');
+					$('.navbar').css('border-color', '#102027');
+				}
+				
+				$(window).scroll(function() {
+					if($('.navbar').offset().top <= $('#main-cover-image').height()){
+						$('.navbar').css('background-color', 'transparent');
+						$('.navbar').css('border-color', 'transparent');
+					}
+					else{
+						$('.navbar').css('background-color', '#102027');
+						$('.navbar').css('border-color', '#102027');
+					}
+				});
+				
 			});
 		</script>
 	</body>
