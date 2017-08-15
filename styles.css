@@ -376,7 +376,7 @@
 /* Senior Design Page */
 #senior-cover-div{
 	height: 100vh;
-	background-color: red;
+	background-color: white;
 	position: relative;
 }
 #senior-heading-cont{
@@ -396,13 +396,15 @@
 	transform: translate(0%, -50%);
 }	
 #senior-class{
-	background-color: red;
+	background-color: #37474f; 
+	color: #fafafa;
 }
 #senior-problem{
-	background-color: orange;
+	background-color: #62727b;
 }
 #senior-solution{
-	background-color: yellow;
+	background-color: #37474f; 
+	color: #fafafa;
 }
 #senior-solution-check{
 	position: relative;
