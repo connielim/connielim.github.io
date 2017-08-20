@@ -423,7 +423,7 @@
 /* LifeFuels Page */
 #lifefuels-cover-div{
 	height: 100vh;
-	background-color: red;
+	background-color: white;
 	position: relative;
 }
 #lifefuels-heading-cont{
@@ -441,22 +441,23 @@
 	width: 95%;
 }
 #lifefuels-lentil{
-	background-color: orange;
+	background-color: #37474f; 
+	color: white;
+	text-align: center;
 }
 #lifefuels-website{
-	background-color: pink;
+	background-color: #62727b;
+	text-align: center;
 }
 #lifefuels-lentil-about{
-	background-color: red;
 }
 #lifefuels-lentil-product{
-	background-color: #64FFDA;
+	margin-top: 25px;
 }
 #lifefuels-website-about{
-	background-color: red;
 }
 #lifefuels-website-product{
-	background-color: #64FFDA;
+	margin-top: 25px;
 }
 /* End of LifeFuels Page */
 
@@ -562,4 +563,8 @@ a{
 .ten-padding{
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+.underline{
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
 }
