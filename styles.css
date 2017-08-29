@@ -219,9 +219,6 @@
 }
 #korea-korean{
 	background-color: #62727b;
-	background-image: url("img/letters3.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
 	color: #fafafa;
 }
 #korea-study-abroad{
@@ -230,6 +227,7 @@
 }
 .korea-slider-imgs{
 	width: 90%;
+	margin: 0 auto;
 }
 #korea-slider-cont{
 	background-color: #62727b;
@@ -242,23 +240,30 @@
 }
 #korea-kpop{
 	background-color: #F5F5F5;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
+	margin: 0 auto;
 	color: #212121;
+	padding-top: 15px; 
+	padding-bottom: 15px;
 }
 #korea-kdrama{
 	background-color: #F5F5F5;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
+	margin: 0 auto;
 	color: #212121;
+	padding-top: 15px; 
+	padding-bottom: 15px;
 }
 #kpop-div{
 	margin-top: 20px;
 }
 #kdrama-div{
 	margin-top: 20px;
+}
+#korea-img-slider-cont{
+	width: 95%;
+	margin: 0 auto;
+}
+#korea-love-title{
+	margin-top: 10px;
 }
 /* End of Korea Page */
 
@@ -559,7 +564,8 @@ a{
 	padding-right: 0px;
 }
 .fifteen-font-size{
-	font-size: 15px;
+	font-size: 19px;
+	opacity: 0.9;
 }
 .ten-padding{
 	padding-top: 10px;
@@ -568,4 +574,18 @@ a{
 .underline{
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
+}
+.inside-div{
+	width: 80%;
+	margin: 0 auto;
+}
+.twenty-font-size-full{
+	font-size: 23px;
+}
+.center-stuff{
+	text-align: center;
+}
+.negative-fifteen-margin{
+	margin-top: -17px;
+	margin-bottom: -8px;
 }

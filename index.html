@@ -400,6 +400,8 @@
 		
 		<script  type="text/javascript">
 			$(document).ready(function(){
+				$('#main-black-cover').css('height', $('#main-cover-image').height() + 'px');
+				
 				$('.descriptions').slick({
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -432,8 +434,6 @@
 				$('.hobbies-icon').css('height', hobbymax + 'px');
 				$('#skills-table-container').css('height', $('#skills-table-div').height() + 'px');
 				$('#resume-title').css('height', $('#resume-title-container').height() + 'px');
-
-				$('#main-black-cover').css('height', $('#main-cover-image').height() + 'px');
 				
 				if( $(window).width() >= 768 ){
 					$('#home-name').text('Always be a work in progress - Emily Lillian');
