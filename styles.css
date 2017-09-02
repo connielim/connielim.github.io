@@ -274,10 +274,6 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-#traveling-new{
-	background-color: #37474f;
-	color: #fafafa;
-}
 #traveling-perspective{
 	background-color: #62727b;
 }
@@ -287,10 +283,11 @@
 }
 #traveling-goal{
 	background-color: #62727b;
+	text-align: center;
 }
-#traveling-honing-title{
-	background-color: #fafafa;
-	color: #37474f;
+#traveling-goal-title{
+	margin-top: 5px;
+	margin-bottom: 20px;
 }
 #traveling-perspective-title{
 	background-color: #fafafa;
@@ -588,4 +585,8 @@ a{
 .negative-fifteen-margin{
 	margin-top: -17px;
 	margin-bottom: -8px;
+}
+.thirty-padding{
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
