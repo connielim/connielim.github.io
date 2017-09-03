@@ -443,23 +443,27 @@
 	width: 95%;
 }
 #lifefuels-lentil{
+	background-color: #62727b;
+	text-align: center;
+}
+#lifefuels-website{
 	background-color: #37474f; 
 	color: white;
 	text-align: center;
 }
-#lifefuels-website{
-	background-color: #62727b;
-	text-align: center;
+#lifefuels-about{
+	background-color: #37474f; 
+	color: white;
 }
 #lifefuels-lentil-about{
 }
 #lifefuels-lentil-product{
-	margin-top: 25px;
+	margin-top: 20px;
 }
 #lifefuels-website-about{
 }
 #lifefuels-website-product{
-	margin-top: 25px;
+	margin-top: 20px;
 }
 /* End of LifeFuels Page */
 
