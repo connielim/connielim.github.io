@@ -25,7 +25,6 @@
 
 #about{
 	background-color: #62727b;
-	
 }
 #about-image{
 	border-radius: 10px;
@@ -70,9 +69,6 @@
 	font-size: 15px;
 }
 
-#skills{
-	background-color: #78909C;	
-}
 #skills-rating-box{
 	display: -webkit-inline-box;
 }
@@ -105,6 +101,10 @@
 #projects{
 	background-color: #37464f;
 }
+#projects-title{
+	color: white;
+	margin-bottom: 30px;
+}
 .project-card{
 	background-color: white; 
 	text-align: center; 
@@ -130,10 +130,6 @@
 	background-color: #004c8c;
 	color: #fafafa;
 	padding-top: 10px;
-}
-#projects-title{
-	color: #fafafa;
-	padding-bottom: 20px;
 }
 .projects-descriptions:hover{
 	color: #58a5f0;
