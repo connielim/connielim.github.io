@@ -54,6 +54,7 @@
 		  </div><!-- /.container-fluid -->
 		</nav>
 		<!-- end of header -->
+		<img src="img/cheesin.jpg" id="main-p-img"></img>
 		
 		<div id="home" class="container-fluid">
 			<div class="row">
@@ -76,7 +77,7 @@
 					<div class="col-md-7 col-sm-7 about-info title"> 
 						<h2>Hi, I'm Connie!</h2>
 						<h4>I am a student at Virginia Tech majoring in Computer Engineering.  It makes me happy to combine 
-						software and hardware to solve problems and I hope to use that passion to help create products that utilizes sensors and microcontrollers.  
+						software and hardware to solve problems and I hope to use that passion to help create products that utilize sensors and microcontrollers.  
 						Some random facts about me: my close friends would describe me as eccentric, but in a good way; 
 						I love trying new things - especially food; and I have at least five unique face expressions.</h4>
 						<div class="descriptions">
@@ -127,7 +128,7 @@
 						<div class="resume-descriptions">
 							<h3>LifeFuels, Summer Software Developer Intern</h3>
 							<p class="resume-indent resume-detail-fsize">May - June 2016 <b>:</b> Improved on an Arduino RFID tag writer to write customized data</p>
-							<p class="resume-indent resume-detail-fsize">May - August 2015 <b>:</b> Developed code for a few company website pages</p>
+							<p class="resume-indent resume-detail-fsize">May - August 2015 <b>:</b> Developed code for three company website pages</p>
 						</div>
 					</div>
 					<div class="col-md-1"></div>
@@ -262,6 +263,9 @@
 			</div>
 		</div>
 		
+		<div class="container-fluid" id="main-p-picture">
+		</div>
+		
 		<div id="projects" class="container-fluid new-container">
 			<div class="container">
 				<div class="row">
@@ -277,7 +281,7 @@
 									</div>
 									<div class="col-md-12 projects-descriptions">
 										<h2>LifeFuels Website/Lentil Writer</h2>
-										<p>Improved on an Arduino RFID tag writer and helped develop a few pages for the company website</p>
+										<p>Improved on an Arduino RFID tag writer and helped develop three pages for the company website</p>
 									</div>
 								</div>
 							</div>
@@ -300,13 +304,13 @@
 								<div class="project-card">
 									<div class="col-md-12 project-logo-container">
 										<div class="projects-logos-2">
-											<img src="img/Virginia_Tech_logo.png" style="width: 80%"></img>
-											<img src="img/ge_logo.jpg" style="width: 90%"></img>
+											<img src="img/Virginia_Tech_logo.png" style="width: 75%"></img>
+											<img src="img/ge_logo.jpg" style="width: 84%"></img>
 										</div>
 									</div>
 									<div class="col-md-12 projects-descriptions">
 										<h2>Senior Design Project</h2>
-										<p>Developed bang-bang control library module in Verilog</p>
+										<p>Developed a bang-bang control library module in Verilog</p>
 									</div>
 								</div>
 							</div>
@@ -436,6 +440,15 @@
 					$('#home-name').text('Connie Lim');
 				}
 				
+				if( $(window).width() >= 850 ){
+					$('#main-p-img').css('width', '100%');
+					$('#main-p-img').css('height', 'auto');
+				}
+				else{
+					$('#main-p-img').css('width', 'auto');
+					$('#main-p-img').css('height', '100%');
+				}
+				
 				$( window ).resize(function() {
 					$('#main-black-cover').css('height', $('#main-cover-image').height() + 'px');
 					$('.hobbies-icon').css('height', hobbymax + 'px');
@@ -447,6 +460,15 @@
 					}
 					else{
 						$('#home-name').text('Connie Lim');
+					}
+					
+					if( $(window).width() >= 850 ){
+						$('#main-p-img').css('width', '100%');
+						$('#main-p-img').css('height', 'auto');
+					}
+					else{
+						$('#main-p-img').css('width', 'auto');
+						$('#main-p-img').css('height', '100%');
 					}
 				});
 				
