@@ -243,20 +243,21 @@
 						<h1 id="projects-title">Projects</h1>
 					</div>
 					<div>
-						<a class="project-links" href="lifefuels-projects.html">
+						<a class="project-links" href="lifefuels-projects.html" id="lifefuels-card">
 							<div class="col-md-4 proj-card-cont">
 								<div class="project-card" >
 									<div class="col-md-12 project-logo-container">
 										<img src="img/lf_logo.svg" class="projects-logo"></img>
 									</div>
 									<div class="col-md-12 projects-descriptions">
-										<h2>LifeFuels Website/Lentil Writer</h2>
+										<h2>LifeFuels Internship</h2>
 										<p>Improved on an Arduino RFID tag writer and helped develop three pages for the company website</p>
+										<h4 id="lifefuels-hover"></h4>
 									</div>
 								</div>
 							</div>
 						</a>
-						<a class="project-links" href="embedded-project.html">
+						<a class="project-links" href="embedded-project.html" id="embedded-card">
 							<div class="col-md-4 proj-card-cont">
 								<div class="project-card">
 									<div class="col-md-12 project-logo-container">
@@ -264,12 +265,13 @@
 									</div>
 									<div class="col-md-12 projects-descriptions">
 										<h2>Embedded Project</h2>
-										<p>Designed and coded a module responsible for picking up and dropping targets</p>
+										<p>Designed and coded an autonomous module responsible for picking up and dropping targets</p>
+										<h4 id="embedded-hover"></h4>
 									</div>
 								</div>
 							</div>
 						</a>
-						<a class="project-links" href="senior-design.html">
+						<a class="project-links" href="senior-design.html" id="senior-card">
 							<div class="col-md-4 proj-card-cont">
 								<div class="project-card">
 									<div class="col-md-12 project-logo-container">
@@ -281,6 +283,7 @@
 									<div class="col-md-12 projects-descriptions">
 										<h2>Senior Design Project</h2>
 										<p>Developed a bang-bang control library module in Verilog</p>
+										<h4 id="senior-hover"></h4>
 									</div>
 								</div>
 							</div>
@@ -398,6 +401,30 @@
 				else{
 					hobbymax = hobbymax1;
 				}
+				
+				$( "#lifefuels-card" ).hover(
+				  function() {
+					$( "#lifefuels-hover").append( $( "<span>Read more ></span>" ) );
+				  }, function() {
+					$( "#lifefuels-hover").find( "span:last" ).remove();
+				  }
+				);
+				
+				$( "#embedded-card" ).hover(
+				  function() {
+					$( "#embedded-hover").append( $( "<span>Read more ></span>" ) );
+				  }, function() {
+					$( "#embedded-hover").find( "span:last" ).remove();
+				  }
+				);
+				
+				$( "#senior-card" ).hover(
+				  function() {
+					$( "#senior-hover").append( $( "<span>Read more ></span>" ) );
+				  }, function() {
+					$( "#senior-hover").find( "span:last" ).remove();
+				  }
+				);
 				
 				$('.hobbies-icon').css('height', hobbymax + 'px');
 				$('#skills-table-container').css('height', $('#skills-table-div').height() + 'px');
