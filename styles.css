@@ -36,39 +36,9 @@
 	margin-top: 15px;
 }
 
-#resume{
+#skills{
 	background-color: #CFD8DC;
 }
-#resume-title-container{
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
-	display: -webkit-box;
-}
-#resume-link{
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
-}
-#resume-link-container{
-	position: relative;
-	margin-left: 10px;
-}
-.resume-header{
-	border-style: solid none solid none;
-	padding: 10px 0px 10px 20px;
-	display: -webkit-box;
-}
-.resume-descriptions{
-	margin-left: 50px;
-}
-.resume-indent{
-	margin-left: 25px;
-}
-.resume-detail-fsize{
-	font-size: 15px;
-}
-
 #skills-rating-box{
 	display: -webkit-inline-box;
 }
