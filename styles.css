@@ -93,7 +93,7 @@
 }
 .project-logo-container{
 	position: relative;
-	height: 59%;
+	height: 60%;
 }
 .projects-logo{
 	width: 80%;
@@ -107,7 +107,7 @@
 	transform: translate(0%, -50%);
 }
 .projects-descriptions{
-	height: 41%;
+	height: 40%;
 	background-color: #004c8c;
 	color: #fafafa;
 	padding-top: 10px;
