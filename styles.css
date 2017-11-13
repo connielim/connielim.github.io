@@ -27,15 +27,6 @@
 	background-color: #62727b;
 	color: #fafafa;
 }
-#about-image{
-	border-radius: 10px;
-}
-#about-image-container{
-	text-align: center;
-}
-.about-info{
-	margin-top: 15px;
-}
 
 #skills{
 	background-color: #CFD8DC;
@@ -81,7 +72,7 @@
 }
 
 #projects{
-	background-color: #37464f;
+	background-color: #455A64;
 }
 #projects-title{
 	color: white;
@@ -122,7 +113,7 @@
 }
 
 #hobbies{
-	background-color: #62717b;
+	background-color: #C5CAE9;
 	color: #fafafa;
 }
 .hobbies-icon{
