@@ -20,7 +20,7 @@
 	font-size: 500%;
 	color: #fafafa;
 	font-family: arial;
-	opacity: 0.95;
+	opacity: 0.8;
 }
 
 #about{
@@ -76,7 +76,7 @@
 }
 
 #projects{
-	background-color: #455A64;
+	background-color: #5a6a72;
 }
 #projects-title{
 	color: white;
@@ -117,7 +117,7 @@
 }
 
 #hobbies{
-	background-color: #C5CAE9;
+	background-color: #bfbfbf;
 	color: #fafafa;
 }
 .hobbies-icon{
@@ -134,6 +134,9 @@
 }
 .hobbies-link:hover{
 	color: #004c8c;
+}
+#hobbies-list{
+	opacity: 0.85;
 }
 /* End of Main Page */
 
