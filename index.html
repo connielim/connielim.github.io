@@ -95,141 +95,56 @@
 			</div>
 		</div>
 		
-		<div id="skills" class="container-fluid new-container">
-			<div class="container">
+		<div id="skills" class="new-container">
+			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-1"></div>
-					<div class="col-md-1"></div>
-					<div class="col-md-8">
+					<div class="col-md-12">
 						<h1 class="title">Skills</h1>
 					</div>
-					<div class="col-md-1"></div>
-					<div class="col-md-1"></div>
-					<div class="col-md-12">
-						<div class="col-md-4">
-						</div>
-						<div class="col-md-4 title">
-							<div class="col-md-12">
-								<h4>Legend:</h4>
+					<div id="whole-slider-container" class="col-md-12">
+						<div id="slider-box">
+							<div id ="sliders-cont" class="col-md-10">
+								<div id="skills-headers">
+									<div class="col-md-4 col-sm-4 col-xs-4 center-div"><a id="programming-link" href="javascript:showProgramming();" class="skills-link">Programming Languages</a></div>
+									<div class="col-md-4 col-sm-4 col-xs-4 center-div"><a id="tool-link" href="javascript:showTools();" class="skills-link">Development Tools</a></div>
+									<div class="col-md-4 col-sm-4 col-xs-4 center-div"><a id="board-link" href="javascript:showBoards();" class="skills-link">Development Boards</a></div>
+								</div>
+								<div id="languages-slider" class="skills-sliders">
+									<div class="bob" id="korea-img-div">
+										<div class="indiv-skill" id="c-div"><img src="img/c.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="cpp-div"><img src="img/c++.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="java-div"><img src="img/java.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="python-div"><img src="img/python.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="verilog-div"><img src="img/verilog.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="html-div"><img src="img/html.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="css-div"><img src="img/css2.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="javascript-div"><img src="img/javascript.png" class="skills-slider-imgs"></img></div>
+									</div>
+								</div>
+								<div id="tools-slider" class="skills-sliders">
+									<div class="bob" id="tool-img-div">
+										<div class="indiv-skill" id="visualstudio-div"><img src="img/visualstudio.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="eclipse-div"><img src="img/eclipse.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="mplabx-div"><img src="img/mplabx.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="quartus-div"><img src="img/quartus.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="modelsim-div"><img src="img/modelsim.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="qt-div"><img src="img/qt.png" class="skills-slider-imgs"></img></div>
+									</div>
+								</div>
+								<div id="boards-slider" class="skills-sliders">
+									<div class="bob" id="korea-img-div">
+										<div class="indiv-skill" id="chipmx-div"><img src="img/chipmx.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="de1soc-div"><img src="img/de1soc.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="arduinouno-div"><img src="img/arduinouno.png" class="skills-slider-imgs"></img></div>
+										<div class="indiv-skill" id="raspberrypi3-div"><img src="img/raspberrypi3.png" class="skills-slider-imgs"></img></div>
+									</div>
+								</div>
 							</div>
-							<div id="skills-rating-box">
-								<div class="skills-rating-leg">
-									<i class="fa fa-circle fa-lg"></i><span> - Beginner</span>
-								</div>
-								<div class="skills-rating-leg">
-									<i class="fa fa-cog fa-lg"></i><span> - Intermediate</span>
-								</div>
-								<div class="skills-rating-leg">
-									<i class="fa fa-cogs fa-lg"></i><span> - Advanced</span>
-								</div>
+							<div class="title col-md-2" id="skills-descriptions">
+								<h3 id="skill-title"></h3>
+								<b><p id="skill-proficiency"></p></b>
+								<p id="skill-description">Hover over the skill to find out my proficiency and how I've used the skill.</p>
 							</div>
-						</div>
-						<div class="col-md-4">
-						</div>
-					</div>
-					<div class="col-md-12" id="skills-table-container">
-						<div id="skills-table-div">
-							<table id="skills-table">
-							  <tr>
-								<th class="skills-table-content skills-table-header">Languages</th>
-								<th class="skills-table-content skills-table-header">Development Tools</th> 
-								<th class="skills-table-content skills-table-header">Operating Systems</th>
-							  </tr>
-							  <tr>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cogs fa-lg skills-rating"></i><span>C</span>
-									</div>
-								</td>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cog fa-lg skills-rating"></i><span>Visual Studio</span>
-									</div>
-								</td> 
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cogs fa-lg skills-rating"></i><span>Windows</span>
-									</div>
-								</td>
-							  </tr>
-							  <tr>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cogs fa-lg skills-rating"></i><span>C++</span>
-									</div>
-								</td>
-								<td class="skills-table-content"> 
-									<div class="skills-icon-box">
-										<i class="fa fa-cog fa-lg skills-rating"></i><span>GitHub</span>
-									</div>
-								</td> 
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cog fa-lg skills-rating"></i><span>Unix</span>
-									</div>
-								</td>
-							  </tr>
-							  <tr>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cog fa-lg skills-rating"></i><span>Java</span>
-									</div>
-								</td>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cog fa-lg skills-rating"></i><span>Eclipse</span>
-									</div>
-								</td> 
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-circle fa-lg skills-rating"></i><span>FreeRTOS</span>
-									</div>
-								</td>
-							  </tr>
-							  <tr>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cog fa-lg skills-rating"></i><span>Verilog</span>
-									</div>
-								</td>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cog fa-lg skills-rating"></i><span>MPLAB X</span>
-									</div>
-								</td> 
-							  </tr>
-							  <tr>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-circle fa-lg skills-rating"></i><span>Python</span>
-									</div>
-								</td>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cog fa-lg skills-rating"></i><span>Quartus</span>
-									</div>
-								</td> 
-							  </tr>
-							  <tr>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-circle fa-lg skills-rating"></i><span>Shell Scripting</span>
-									</div>
-								</td>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-cog fa-lg skills-rating"></i><span>Modelsim</span>
-									</div>
-								</td> 
-							  </tr>
-							  <tr>
-								<td class="skills-table-content">
-									<div class="skills-icon-box">
-										<i class="fa fa-circle fa-lg skills-rating"></i><span>Matlab</span>
-									</div>
-								</td>
-							  </tr>
-							</table>
 						</div>
 					</div>
 				</div>
@@ -348,7 +263,7 @@
 				<div class="row footer-section">
 					<div class="col-md-4 col-sm-2 col-xs-2"></div>
 					<div class="col-md-1 col-sm-2 col-xs-2">
-						<a href="mailto:conniel1@vt.edu"><i class="fa fa-envelope-o fa-2x"></i></a>
+						<a href="mailto:connielimcpe@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
 					</div>
 					<div class="col-md-1 col-sm-2 col-xs-2">
 						<a href="https://www.linkedin.com/in/connie-lim-2746789b/"><i class="fa fa-linkedin-square fa-2x"></i></a>
@@ -375,6 +290,195 @@
 		<script type="text/javascript" src="slick/slick.min.js"></script>
 		
 		<script  type="text/javascript">
+			var skillsLinkWidth = '5px';
+			var skillsLinkColor = '#337ab7'
+			
+			function showProgramming(){
+				$('#tools-slider').css('display', 'none');
+				$('#languages-slider').css('display', 'inline-block');
+				$('#boards-slider').css('display', 'none');
+				$('#programming-link').css('border-style', 'none none solid none');
+				$('#programming-link').css('border-width', skillsLinkWidth);
+				$('#programming-link').css('border-color', skillsLinkColor);
+				$('#tool-link').css('border-style', 'none');
+				$('#board-link').css('border-style', 'none');
+			}
+		
+			function showBoards(){
+				$('#tools-slider').css('display', 'none');
+				$('#languages-slider').css('display', 'none');
+				$('#boards-slider').css('display', 'inline-block');
+				$('#board-link').css('border-style', 'none none solid none');
+				$('#board-link').css('border-width', skillsLinkWidth);
+				$('#board-link').css('border-color', skillsLinkColor);
+				$('#tool-link').css('border-style', 'none');
+				$('#programming-link').css('border-style', 'none');
+			}
+		
+			function showTools(){
+				$('#tools-slider').css('display', 'inline-block');
+				$('#languages-slider').css('display', 'none');
+				$('#boards-slider').css('display', 'none');
+				$('#tool-link').css('border-style', 'none none solid none');
+				$('#tool-link').css('border-width', skillsLinkWidth);
+				$('#tool-link').css('border-color', skillsLinkColor);
+				$('#programming-link').css('border-style', 'none');
+				$('#board-link').css('border-style', 'none');
+			}
+		
+			var skillInfo = "<span>Hover over the skill to find out my proficiency and how I've used the skill.</span>";
+			var notHoverSkill = function() {
+					$( "#skill-title").find( "span:last" ).remove();
+					$( "#skill-description").html(skillInfo);
+					$( "#skill-proficiency").find( "span:last" ).remove();
+				}
+			
+			//functions for each of the skills being hovered
+			$( "#c-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>C</span>");
+					$( "#skill-description").html("<span>I heavily used C in both my microcontrollers and embedded courses.  Bit operations, pointers, and basic arithmetic were used throughout the approximately six projects assigned in the courses.</span>");
+					$( "#skill-proficiency").html("<span>Level: Advanced</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#cpp-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>C++</span>");
+					$( "#skill-description").html("<span>This is one of my top languages.  I've done object-oriented programing, multi-threading, message queues, data structures, applications, and more.</span>");
+					$( "#skill-proficiency").html("<span>Level: Advanced</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#java-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Java</span>");
+					$( "#skill-description").html("<span>With this language, I've done object-oriented, data structures, and test cases.  I have also used Java to make a few Android apps.</span>");
+					$( "#skill-proficiency").html("<span>Level: Proficient</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#python-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Python</span>");
+					$( "#skill-description").html("<span>I've used Python to program the Raspberry Pi 3 to complete projects by using libraries.  I've worked with TCP/UDP, MongoDB database, bluetooth, and APIs such as Twitter and Flask.</span>");
+					$( "#skill-proficiency").html("<span>Level: Beginner</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#verilog-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Verilog</span>");
+					$( "#skill-description").html("<span>Verilog is a hardware description language that I've used to program an FPGA.  I've programmed finite state machines and used gates to complete assignments and projects.  That's not all I've done.</span>");
+					$( "#skill-proficiency").html("<span>Level: Proficient</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#html-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>HTML</span>");
+					$( "#skill-description").html("<span>I've created websites using this language including this one and a company website.  To make the websites more interesting, I've used open source libraries such as Bootstrap and Slick.</span>");
+					$( "#skill-proficiency").html("<span>Level: Beginner</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#css-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>CSS</span>");
+					$( "#skill-description").html("<span>This website and the project I did for my internship are the two examples of my work using CSS.</span>");
+					$( "#skill-proficiency").html("<span>Level: Beginner</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#javascript-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>JavaScript</span>");
+					$( "#skill-description").html("<span>The two projects that I've used JavaScript are for this website and a company's website.  I've used if statements and basic logic.</span>");
+					$( "#skill-proficiency").html("<span>Level: Beginner</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#visualstudio-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Visual Studio</span>");
+					$( "#skill-description").html("<span>Though it has been a while, I've used Visual Studio to program in C++.  I currently use Notepad++ and the Visual Studio compiler to code.</span>");
+					$( "#skill-proficiency").html("<span>Level: Beginner</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#eclipse-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Eclipse</span>");
+					$( "#skill-description").html("<span>I've used Eclipse for two semesters and have written and ran tests on it.</span>");
+					$( "#skill-proficiency").html("<span>Level: Beginner</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#mplabx-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>MPLAB X</span>");
+					$( "#skill-description").html("<span>MPLAB X was used for programming C into the Cerebot PIC32MX7.  I've also Harmony to configure protocols and systems such as ADC.</span>");
+					$( "#skill-proficiency").html("<span>Level: Proficient</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#quartus-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Quartus</span>");
+					$( "#skill-description").html("<span>My experience with Quartus is programming projects in Verilog to run the Terasic DE1-SoC .  I've also used Qsys a couple of times.</span>");
+					$( "#skill-proficiency").html("<span>Level: Proficient</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#modelsim-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>ModelSim</span>");
+					$( "#skill-description").html("<span>Other than using ModelSim for coding in Verilog, I have also used it to write test benches and view the waveforms the modules.</span>");
+					$( "#skill-proficiency").html("<span>Level: Proficient</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#qt-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Qt</span>");
+					$( "#skill-description").html("<span>With Qt, I've done a handful of projects involving applications and GUIs using C++.</span>");
+					$( "#skill-proficiency").html("<span>Level: Beginner</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#chipmx-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Cerebot PIC32MX7</span>");
+					$( "#skill-description").html("<span>I learned how to implement different communicating protocols and peripherals on this microcontroller.  Some of the projects that have been implemented includes a snake game using a joystick and a zombie game using an accelerometer.</span>");
+					$( "#skill-proficiency").html("<span>Level: Proficient</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#de1soc-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Terasic DE1-SoC</span>");
+					$( "#skill-description").html("<span>I used this board to learn about FPGAs.  Some of the projects impelemented were a stopwatch and a calculator.</span>");
+					$( "#skill-proficiency").html("<span>Level: Beginner</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#arduinouno-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Arduino Uno</span>");
+					$( "#skill-description").html("<span>The only project that I worked on that use the Arduino was for my internship.  The Arduino acted as a medium between the laptop and RFID tag scanner.</span>");
+					$( "#skill-proficiency").html("<span>Level: Beginner</span>");
+				}, notHoverSkill
+			);
+			
+			$( "#raspberrypi3-div" ).hover(
+				function() {
+					$( "#skill-title").html("<span>Raspberry Pi 3</span>");
+					$( "#skill-description").html("<span>I worked with this board for a semester.  I've the board's bluetooth capablity and peipherals such as GPIO.</span>");
+					$( "#skill-proficiency").html("<span>Level: Beginner</span>");
+				}, notHoverSkill
+			);
+			//end of individual skills hovering functions
+			
 			$(document).ready(function(){
 				$('#main-black-cover').css('height', $('#main-cover-image').height() + 'px');
 				
@@ -437,9 +541,13 @@
 				
 				if( $(window).width() >= 768 ){
 					$('#home-name').text('Always be a work in progress - Emily Lillian');
+					$('#sliders-cont').css('border-right', 'solid #337ab7');
+					$('#sliders-cont').css('border-width', '2px');
 				}
 				else{
 					$('#home-name').text('Connie Lim');
+					$('#sliders-cont').css('border-right', 'none');
+					$('#sliders-cont').css('border-width', '0px');
 				}
 				
 				if( $(window).width() >= 992 ){
@@ -451,6 +559,37 @@
 					$('#main-p-img').css('height', '100%');
 				}
 				
+				$('.bob').slick({
+					infinite: true,
+					slidesToShow: 3,
+				    slidesToScroll: 1,
+				    autoplay: true,
+					autoplaySpeed: 750,
+					arrows: false,
+					variablewidth: true,
+					dots: true,
+					responsive: [
+						{
+						  breakpoint: 991,
+						  settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							infinite: true,
+							autoplay: true
+						  }
+						},
+						{
+						  breakpoint: 768,
+						  settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							infinite: true,
+							autoplay: true
+						  }
+						}
+					  ]
+			    });
+				
 				$( window ).resize(function() {
 					$('#main-black-cover').css('height', $('#main-cover-image').height() + 'px');
 					$('.hobbies-icon').css('height', hobbymax + 'px');
@@ -459,9 +598,13 @@
 					
 					if( $(window).width() >= 768 ){
 						$('#home-name').text('Always be a work in progress - Emily Lillian');
+						$('#sliders-cont').css('border-right', 'solid #337ab7');
+						$('#sliders-cont').css('border-width', '2px');
 					}
 					else{
 						$('#home-name').text('Connie Lim');
+						$('#sliders-cont').css('border-right', 'none');
+						$('#sliders-cont').css('border-width', '0px');
 					}
 					
 					if( $(window).width() >= 992 ){
