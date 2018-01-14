@@ -35,33 +35,51 @@
 #skills{
 	background-color: #CFD8DC;
 }
-#skills-rating-box{
-	display: -webkit-inline-box;
+.skills-sliders{
+	width: 95%;
+	margin: 0 auto;
 }
-.skills-rating{
-	margin-right: 10px;
+#skills-headers{
+	margin-bottom: 25px;
 }
-.skills-rating-leg{
-	margin-right: 15px;
-}
-.skills-icon-box{
-	margin-bottom: 10px;
-}
-#skills-table-container{
-	position: relative;
+#whole-slider-container{
 	margin-top: 25px;
 }
-#skills-table-div{
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
+#languages-slider{
+	display: inline-block;
 }
-.skills-table-header{
-	font-size: 20px;
+#tools-slider{
+	display: none;
 }
-.skills-table-content{
-	padding-right: 25px;
-	padding-bottom: 10px;
+#boards-slider{
+	display: none;
+}
+.skills-link:hover, .skills-link:focus{
+	color: black;
+	text-decoration: none;
+	opacity: 1;
+}
+.skills-link{
+	color: black;
+	font-size: 17px;
+}
+#programming-link{
+	border-style: none none solid none;
+	border-width: 5px;
+	border-color: #337ab7;
+}
+.skills-slider-imgs{
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+}
+.slick-initialized .slick-slide {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+#skill-title{
+	margin-bottom: 0px;
 }
 
 #main-p-picture{
