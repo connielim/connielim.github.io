@@ -93,41 +93,24 @@
 	bottom: 0;
 }
 
-#projects{
+#experiences{
 	background-color: #5a6a72;
 }
-#projects-title{
+#experiences-title{
 	color: white;
 	margin-bottom: 30px;
 }
-.project-card{
-	background-color: white; 
-	text-align: center; 
-	height: 480px;
+#experiences-description{
+	color: white;
 }
-.project-logo-container{
-	position: relative;
-	height: 60%;
+.experiences-date{
+	margin-top: 0px;
 }
-.projects-logo{
-	width: 80%;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
-.projects-logos-2{
-	position: absolute;
-	top: 50%;
-	transform: translate(0%, -50%);
-}
-.projects-descriptions{
-	height: 40%;
-	background-color: #004c8c;
-	color: #fafafa;
-	padding-top: 10px;
-}
-.proj-card-cont{
+.experiences-block{
 	margin-bottom: 40px;
+}
+.experience-headers{
+	margin-top: 10px;
 }
 
 #hobbies{
@@ -287,4 +270,7 @@ a{
 .thirty-padding{
 	padding-top: 30px;
 	padding-bottom: 30px;
+}
+.onehundred-width{
+	width: 100%;
 }
