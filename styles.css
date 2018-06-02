@@ -28,7 +28,7 @@
 	color: #fafafa;
 }
 #about-paragraph{
-	font-size: 19px;
+	font-size: 21px;
 	margin-top: 9px;
 }
 
@@ -163,6 +163,8 @@
 .navbar-default .navbar-nav > li > a{
 	color: white;
 	opacity: 0.9;
+	font-size: 15px;
+	
 }
 
 .navbar-default .navbar-nav .open > a:focus{
