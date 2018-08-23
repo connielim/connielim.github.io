@@ -48,15 +48,23 @@
 				return filename == "Step_1_LEFT_Frame_0.png";
 				});
 				
+			var footImageRight = Object.keys( loader.files ).find( function ( filename ) {
+				return filename == "Step_1_RIGHT_Frame_0.png";
+				});
+				
 			var img = new Image();
 			var url = loader.extractAsBlobUrl( footImageLeft, 'image/png' );
 			img.onload = function () {
-				//document.getElementById("temp").src( img );
-				//document.body.appendChild( img );
 				loader.clear( filename );
 			}
 			$("#temp").attr("src", url);
-			//img.src = url;
+			
+			img = new Image();
+			url = loader.extractAsBlobUrl( footImageRight, 'image/png' );
+			img.onload = function () {
+				loader.clear( filename );
+			}
+			$("#temp2").attr("src", url);
 		});
 		
 		
