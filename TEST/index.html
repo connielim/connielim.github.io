@@ -39,7 +39,7 @@
 		} );*/
 		
 		// on load
-		loader.on( 'load', function ( e ) {
+		/*loader.on( 'load', function ( e ) {
 			Object.keys( loader.files ).forEach( function ( filename ) {
 				alert(filename);
 				var img = new Image();
@@ -51,11 +51,11 @@
 				}
 				img.src = url;
 			} );
-		} );
+		} );*/
 		
-		/*loader.on( 'load', function ( e ) {
+		loader.on( 'load', function ( e ) {
 			Object.keys( loader.files ).find( function ( filename ) {
-				return filename == "Step_1_LEFT_Frame_0";}).then(function(footImageLeft){
+				return filename == "Step_1_LEFT_Frame_0.png";}).then(function(footImageLeft){
 					var img = new Image();
 					var url = loader.extractAsBlobUrl( filename, 'image/png' );
 					img.onload = function () {
@@ -66,7 +66,7 @@
 					document.getElementById("temp").src( img );
 					//img.src = url;
 				});
-		} );*/
+		} );
 		
 		
 		
