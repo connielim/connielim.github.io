@@ -56,7 +56,7 @@
 		
 		
 		
-		zip.generateAsync({type:"blob"}).then(function (blob) { // 1) generate the zip file
+		/*zip.generateAsync({type:"blob"}).then(function (blob) { // 1) generate the zip file
 			//saveAs(blob, "hello.zip");                          // 2) trigger the download
 			zip.loadAsync(blob).then(function(zip){
 			return zip.file("bob.txt").async("string");}).then(function (text) {
@@ -64,7 +64,7 @@
 			});
 		}, function (err) {
 			jQuery("#blob").text(err);
-		});
+		});*/
 		
 		
 		
