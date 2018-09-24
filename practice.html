@@ -1,134 +1,100 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css"/>
-		<link rel="stylesheet" href="styles.css">
-		<title>Connie Lim</title>
-	</head>	
-	<body>
+<head>
+    <title></title>
+	<script type="text/javascript" src="jquery.js"></script> 
+	<script type="text/javascript" src="ZipLoader.js"></script>
+</head>
+<body>
+	<button type="button" id="button">load 221KB ZIP and extract 495 images</button>
+
+    <img src="" id="temp" />
+	<img src="" id="temp2" />
+
+    <script type="text/javascript">
+
+        var loader = new ZipLoader('./footImages.zip');
+		// on load
+		/*loader.on( 'load', function ( e ) {
+			Object.keys( loader.files ).forEach( function ( filename ) {
+				var img = new Image();
+				var url = loader.extractAsBlobUrl( filename, 'image/png' );
+				img.onload = function () {
+					//document.getElementById("temp").src( img );
+					document.body.appendChild( img );
+					loader.clear( filename );
+				}
+				img.src = url;
+			} );
+		} );*/
 		
-		<div class="container">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-4">
-					</div>
-					<div class="col-md-4">
-						<table style="width:100%">
-						  <tr>
-							<th>Languages</th>
-							<th>Dev Tools</th> 
-							<th>Operating Systems</th>
-						  </tr>
-						  <tr>
-							<td>
-								<div class="skills-icon-box">
-									<i class="fa fa-cogs fa-lg skills-rating"></i><span>C</span>
-								</div>
-							</td>
-							<td>
-								<div class="skills-icon-box">
-								<i class="fa fa-cog fa-lg skills-rating"></i><span>Visual Studio</span>
-							</div>
-							</td> 
-							<td>
-							<div class="skills-icon-box">
-								<i class="fa fa-cogs fa-lg skills-rating"></i><span>Windows</span>
-							</div>
-							</td>
-						  </tr>
-						  <tr>
-							<td>
-								<div class="skills-icon-box">
-								<i class="fa fa-cogs fa-lg skills-rating"></i><span>C++</span>
-							</div>
-							</td>
-							<td>
-							<div class="skills-icon-box">
-								<i class="fa fa-cog fa-lg skills-rating"></i><span>GitHub</span>
-							</div>
-							</td> 
-							<td>
-							<div class="skills-icon-box">
-								<i class="fa fa-cog fa-lg skills-rating"></i><span>Unix</span>
-							</div>
-							</td>
-						  </tr>
-						  <tr>
-							<td>
-								<div class="skills-icon-box">
-								<i class="fa fa-cog fa-lg skills-rating"></i><span>Java</span>
-							</div>
-							</td>
-							<td>
-							<div class="skills-icon-box">
-								<i class="fa fa-cog fa-lg skills-rating"></i><span>Eclipse</span>
-							</div>
-							</td> 
-							<td>
-							<div class="skills-icon-box">
-								<i class="fa fa-circle fa-lg skills-rating"></i><span>FreeRTOS</span>
-							</div>
-							</td>
-						  </tr>
-						  <tr>
-							<td>
-								<div class="skills-icon-box">
-								<i class="fa fa-circle fa-lg skills-rating"></i><span>MatLab</span>
-							</div>
-							</td>
-						  </tr>
-						  <tr>
-							<td>
-								<div class="skills-icon-box">
-								<i class="fa fa-circle fa-lg skills-rating"></i><span>HTML/CSS/JavaScript</span>
-							</div>
-							</td>
-						  </tr>
-						  <tr>
-							<td>
-								<div class="skills-icon-box">
-								<i class="fa fa-circle fa-lg skills-rating"></i><span>Python</span>
-							</div>
-							</td>
-						  </tr>
-						  <tr>
-							<td>
-								<div class="skills-icon-box">
-								<i class="fa fa-circle fa-lg skills-rating"></i><span>Shell Scripting</span>
-							</div>
-							</td>
-						  </tr>
-						</table>
-					</div>
-					<div class="col-md-4">
-					</div>
-				</div>
-				<div class="row">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<h3>Hi!  I’m Connie </h3>
-				</div>
-				<div class="col-md-4">
-					<img src="img/standing_pose3.jpg" style="width: 80%"></img>
-				</div>
-				<div class="col-md-8">
-					<p>I am a student at Virginia Tech majoring in Computer Engineering.  After I become an alumnus in December 2017, I hope to contribute to society by working with microcontrollers and sensors.  I’ve lived near Chinatown, LA for half of my life until I moved to Roanoke, VA where I am deprived of Asian food.  I love learning KPop dances and eating.  </p>
-				</div>
-			</div>
-		</div>
+		// on load
+		/*loader.on( 'load', function ( e ) {
+			Object.keys( loader.files ).forEach( function ( filename ) {
+				alert(filename);
+				var img = new Image();
+				var url = loader.extractAsBlobUrl( filename, 'image/png' );
+				img.onload = function () {
+					//document.getElementById("temp").src( img );
+					document.body.appendChild( img );
+					loader.clear( filename );
+				}
+				img.src = url;
+			} );
+		} );*/
 		
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="slick/slick.min.js"></script>
-	
+		loader.on( 'load', function ( e ) {
+			var footImageLeft = Object.keys( loader.files ).find( function ( filename ) {
+				return filename == "Step_1_LEFT_Frame_0.png";
+				});
+				
+			var footImageRight = Object.keys( loader.files ).find( function ( filename ) {
+				return filename == "Step_1_RIGHT_Frame_0.png";
+				});
+				
+			var img = new Image();
+			var url = loader.extractAsBlobUrl( footImageLeft, 'image/png' );
+			img.onload = function () {
+				loader.clear( filename );
+			}
+			$("#temp").attr("src", url);
+			
+			img = new Image();
+			url = loader.extractAsBlobUrl( footImageRight, 'image/png' );
+			img.onload = function () {
+				loader.clear( filename );
+			}
+			$("#temp2").attr("src", url);
+		});
 		
-	</body>
+		
+		
+		
+		/*zip.generateAsync({type:"blob"}).then(function (blob) { // 1) generate the zip file
+			//saveAs(blob, "hello.zip");                          // 2) trigger the download
+			zip.loadAsync(blob).then(function(zip){
+			return zip.file("bob.txt").async("string");}).then(function (text) {
+				alert(text);
+			});
+		}, function (err) {
+			jQuery("#blob").text(err);
+		});*/
+		
+		
+		
+		
+
+
+		// on button click
+		document.getElementById( 'button' ).addEventListener( 'click', function ( e ) {
+			loader.load();
+			e.target.disabled = true;
+		} );
+
+
+    </script>
+
+
+</body>
+
 </html>
