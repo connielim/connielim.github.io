@@ -294,7 +294,7 @@
 		
 		function showStressPoints(){
 			console.log("src: " + document.getElementById("leftImage8Points").src);
-			if(document.getElementById("leftImage8Points").src == ''){
+			if(document.getElementById("leftImage8Points").src != stressLeftFrameURL){
 				document.getElementById("leftImage8Points").src = stressLeftFrameURL;
 				document.getElementById("rightImage8Points").src = stressRightFrameURL;
 				console.log("here");
