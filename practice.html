@@ -188,13 +188,24 @@
 		loader.load();
 		
 		loader.on( 'load', function ( e ) {
-			var footImageLeft = Object.keys( loader.files ).find( function ( filename ) {
+		var footImageLeft, footImageRight;
+			Object.keys(loader.files).forEach((fileName) => {
+				if(fileName == "Step_1_LEFT_Frame_0.png"){
+					footImageLeft = filename;
+				}
+				else if (fileName == "Step_1_RIGHT_Frame_0.png"){
+					footImageRight = filename;
+				}
+			});
+			
+			
+			/*var footImageLeft = Object.keys( loader.files ).find( function ( filename ) {
 				return filename == "Step_1_LEFT_Frame_0.png";
 				});
 				
 			var footImageRight = Object.keys( loader.files ).find( function ( filename ) {
 				return filename == "Step_1_RIGHT_Frame_0.png";
-				});
+				});*/
 				
 			var img = new Image();
 			var url = loader.extractAsBlobUrl( footImageLeft, 'image/png' );
