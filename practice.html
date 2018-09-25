@@ -251,33 +251,24 @@
 		}
 		
 		function showStressPoints(){
-			ZipLoader.unzip('./response.zip').then(function(unziped){
+			loader.load().then(function(derp){
+			//});
 				console.log("here");
-				var leftFootStress = Object.keys( unziped.files ).find( function ( filename ) {
+			//loader.on( 'load', function ( e ) {
+				var footImageLeft, footImageRight;
+					var leftFootStress = Object.keys( derp.files ).find( function ( filename ) {
 					return filename == "Left_StressPoints.png";
 				});
-				console.log("here2");
-				var rightFootStress = Object.keys( unziped.files ).find( function ( filename ) {
+				
+				var rightFootStress = Object.keys( derp.files ).find( function ( filename ) {
 					return filename == "Right_StressPoints.png";
 				});
+				
+				console.log("here2");
 				
 				document.getElementById("leftImageCOP").src = leftFootStress;
 				document.getElementById("rightImageCOP").src = rightFootStress;
 			});
-		
-			/*loader.on( 'load', function ( e ) {
-				var footImageLeft, footImageRight;
-					var leftFootStress = Object.keys( loader.files ).find( function ( filename ) {
-					return filename == "Left_StressPoints.png";
-				});
-				
-				var rightFootStress = Object.keys( loader.files ).find( function ( filename ) {
-					return filename == "Right_StressPoints.png";
-				});
-				
-				document.getElementById("leftImageCOP").src = leftFootStress;
-				document.getElementById("rightImageCOP").src = rightFootStress;
-			});*/
 		}
 		
 		function showCoPLine(){
