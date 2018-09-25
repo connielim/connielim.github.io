@@ -182,49 +182,51 @@
 	
 		var maxLeftFrames = 0;
 		var maxRightFrames = 0;
+		var stressLeftFrameURL = null;
+		var stressRightFrameURL = null;
+		var copLeftFrameURL = null;
+		var copRightFrameURL = null;
+		var idealCOPLeftFrameURL = null;
+		var idealCOPRightFrameURL = null;
+		var gaitLeftFrameURL = null;
+		var gaitRightFrameURL = null;
+		var footImageCompositeLeft, footImageCompositeRight;
+		var leftIndivFrames = [];
+		var rightIndivFrames = [];
 
         var loader = new ZipLoader('./response.zip');
 		
 		loader.load();
 		
 		loader.on( 'load', function ( e ) {
-		var footImageLeft, footImageRight;
 			Object.keys(loader.files).forEach((fileName) => {
+				//left composite image
 				if(fileName == "Step_1_LEFT_Frame_0.png"){
-					footImageLeft = fileName;
+					var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+					document.getElementById("leftImage").src = url;
 				}
+				//right composite image
 				else if (fileName == "Step_1_RIGHT_Frame_0.png"){
-					footImageRight = fileName;
+					url = loader.extractAsBlobUrl( fileName, 'image/png' );
+					document.getElementById("rightImage").src = url;
 				}
 				else{
-					//parse here?
 					var array = fileName.split('_');
 					if(array.includes("LEFT")){
 						maxLeftFrames++;
+						var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+						leftIndivFrames.push(url);
 					}
 					else if(array.includes("RIGHT")){
 						maxRightFrames++;
+						var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+						rightIndivFrames.push(url);
 					}
 				}
 				
 			});
-				
-			var img = new Image();
-			var url = loader.extractAsBlobUrl( footImageLeft, 'image/png' );
-			img.onload = function () {
-				loader.clear( filename );
-			}
-			document.getElementById("leftImage").src = url;
-			//$("#leftImage").attr("src", url);
 			
-			img = new Image();
-			url = loader.extractAsBlobUrl( footImageRight, 'image/png' );
-			img.onload = function () {
-				loader.clear( filename );
-			}
-			document.getElementById("rightImage").src = url;
-			//$("#rightImage").attr("src", url);
-			
+			console.log(leftIndivFrames + " " + rightIndivFrames);
 			//setting the max frames 
 			document.getElementById("maxLeftFrame").innerHTML = maxLeftFrames;
 			document.getElementById("maxRightFrame").innerHTML = maxRightFrames;
@@ -251,24 +253,7 @@
 		}
 		
 		function showStressPoints(){
-			loader.load().then(function(derp){
-			//});
-				console.log("here");
-			//loader.on( 'load', function ( e ) {
-				var footImageLeft, footImageRight;
-					var leftFootStress = Object.keys( derp.files ).find( function ( filename ) {
-					return filename == "Left_StressPoints.png";
-				});
-				
-				var rightFootStress = Object.keys( derp.files ).find( function ( filename ) {
-					return filename == "Right_StressPoints.png";
-				});
-				
-				console.log("here2");
-				
-				document.getElementById("leftImageCOP").src = leftFootStress;
-				document.getElementById("rightImageCOP").src = rightFootStress;
-			});
+			
 		}
 		
 		function showCoPLine(){
