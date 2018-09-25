@@ -266,7 +266,6 @@
 				
 			});
 			
-			console.log(leftIndivFrames.length + " " + rightIndivFrames.length);
 			//setting the max frames 
 			document.getElementById("maxLeftFrame").innerHTML = maxLeftFrames;
 			document.getElementById("maxRightFrame").innerHTML = maxRightFrames;
@@ -293,29 +292,47 @@
 		}
 		
 		function showStressPoints(){
-			console.log("src: " + document.getElementById("leftImage8Points").src);
 			if(document.getElementById("leftImage8Points").src != stressLeftFrameURL){
 				document.getElementById("leftImage8Points").src = stressLeftFrameURL;
 				document.getElementById("rightImage8Points").src = stressRightFrameURL;
-				console.log("here");
 			}
 			else{
 				document.getElementById("leftImage8Points").src = '';
 				document.getElementById("rightImage8Points").src = '';
-				console.log("here2");
 			}
 		}
 		
 		function showCoPLine(){
-		
+			if(document.getElementById("leftImageCOP").src != copLeftFrameURL){
+				document.getElementById("leftImageCOP").src = copLeftFrameURL;
+				document.getElementById("rightImageCOP").src = copRightFrameURL;
+			}
+			else{
+				document.getElementById("leftImageCOP").src = '';
+				document.getElementById("rightImageCOP").src = '';
+			}
 		}
 		
 		function showIdealCoP(){
-		
+			if(document.getElementById("leftImageIdealCOP").src != idealCOPLeftFrameURL){
+				document.getElementById("leftImageIdealCOP").src = idealCOPLeftFrameURL;
+				document.getElementById("rightImageIdealCOP").src = idealCOPRightFrameURL;
+			}
+			else{
+				document.getElementById("leftImageIdealCOP").src = '';
+				document.getElementById("rightImageIdealCOP").src = '';
+			}
 		}
 		
 		function showGaitAngleLine(){
-		
+			if(document.getElementById("leftImageGaitAngle").src != gaitLeftFrameURL){
+				document.getElementById("leftImageGaitAngle").src = gaitLeftFrameURL;
+				document.getElementById("rightImageGaitAngle").src = gaitRightFrameURL;
+			}
+			else{
+				document.getElementById("leftImageGaitAngle").src = '';
+				document.getElementById("rightImageGaitAngle").src = '';
+			}
 		}
 
 
