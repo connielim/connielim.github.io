@@ -252,10 +252,11 @@
 		
 		function showStressPoints(){
 			ZipLoader.unzip('./response.zip').then(function(unziped){
+				console.log("here");
 				var leftFootStress = Object.keys( unziped.files ).find( function ( filename ) {
 					return filename == "Left_StressPoints.png";
 				});
-				
+				console.log("here2");
 				var rightFootStress = Object.keys( unziped.files ).find( function ( filename ) {
 					return filename == "Right_StressPoints.png";
 				});
