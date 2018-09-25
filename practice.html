@@ -200,10 +200,10 @@
 					//parse here?
 					var array = fileName.split('_');
 					if(array.includes("LEFT")){
-						maxLeftFrame++;
+						maxLeftFrames++;
 					}
 					else if(array.includes("RIGHT")){
-						maxRightFrame++;
+						maxRightFrames++;
 					}
 				}
 				
@@ -223,7 +223,7 @@
 			}
 			$("#rightImage").attr("src", url);
 			
-			console.log(maxLeftFrame + ' ' + maxRightFrame);
+			console.log(maxLeftFrames + ' ' + maxRightFrames);
 		});
 		
 		function getPrevFrame(){
