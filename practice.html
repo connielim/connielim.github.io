@@ -251,7 +251,16 @@
 		}
 		
 		function showStressPoints(){
-		
+			var leftFootStress = Object.keys( loader.files ).find( function ( filename ) {
+				return filename == "Left_StressPoints.png";
+			});
+			
+			var rightFootStress = Object.keys( loader.files ).find( function ( filename ) {
+				return filename == "Right_StressPoints.png";
+			});
+			
+			document.getElementById("leftImageCOP").src = leftFootStress;
+			document.getElementById("righttImageCOP").src = righttFootStress;
 		}
 		
 		function showCoPLine(){
