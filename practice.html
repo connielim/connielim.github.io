@@ -293,14 +293,13 @@
 		}
 		
 		function showStressPoints(){
-			if(document.getElementById("leftImage8Points").src == ''){
+			if(document.getElementById("leftImage8Points").src == null){
 				document.getElementById("leftImage8Points").src = stressLeftFrameURL;
 				document.getElementById("rightImage8Points").src = stressRightFrameURL;
 			}
 			else{
-				document.getElementById("leftImage8Points").src = '';
-				document.getElementById("rightImage8Points").src = '';
-
+				document.getElementById("leftImage8Points").src = null;
+				document.getElementById("rightImage8Points").src = null;
 			}
 		}
 		
