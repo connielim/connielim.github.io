@@ -293,13 +293,16 @@
 		}
 		
 		function showStressPoints(){
-			if(document.getElementById("leftImage8Points").src == null){
+			console.log("src: " + document.getElementById("leftImage8Points").src);
+			if(document.getElementById("leftImage8Points").src == ''){
 				document.getElementById("leftImage8Points").src = stressLeftFrameURL;
 				document.getElementById("rightImage8Points").src = stressRightFrameURL;
+				console.log("here");
 			}
 			else{
-				document.getElementById("leftImage8Points").src = null;
-				document.getElementById("rightImage8Points").src = null;
+				document.getElementById("leftImage8Points").src = '';
+				document.getElementById("rightImage8Points").src = '';
+				console.log("here2");
 			}
 		}
 		
