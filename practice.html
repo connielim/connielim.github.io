@@ -222,6 +222,42 @@
 						var url = loader.extractAsBlobUrl( fileName, 'image/png' );
 						rightIndivFrames.push(url);
 					}
+					else if(array.includes("Left"){
+						if(array.includes("COPLine.png"){
+							var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+							copLeftFrameURL = url;
+						}
+						else if(array.includes("GaitAngle.png"){
+							var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+							gaitLeftFrameURL = url;
+						}
+						else if(array.includes("IdealCOP.png"){
+							var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+							idealCOPLeftFrameURL = url;
+						}
+						else if(array.includes("StressPoints.png"){
+							var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+							stressLeftFrameURL = url;
+						}
+					}
+					else if(array.includes("Right"){
+						if(array.includes("COPLine.png"){
+							var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+							copRightFrameURL = url;
+						}
+						else if(array.includes("GaitAngle.png"){
+							var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+							gaitRightFrameURL = url;
+						}
+						else if(array.includes("IdealCOP.png"){
+							var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+							idealCOPRightFrameURL = url;
+						}
+						else if(array.includes("StressPoints.png"){
+							var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+							stressRightFrameURL = url;
+						}
+					}
 				}
 				
 			});
@@ -253,7 +289,7 @@
 		}
 		
 		function showStressPoints(){
-			
+			document.getElementById("leftImage8Points").src = stressLeftFrameURL;
 		}
 		
 		function showCoPLine(){
