@@ -251,16 +251,32 @@
 		}
 		
 		function showStressPoints(){
-			var leftFootStress = Object.keys( loader.files ).find( function ( filename ) {
-				return filename == "Left_StressPoints.png";
+			loader.load().then(function(unzip){
+					var leftFootStress = Object.keys( unzip.files ).find( function ( filename ) {
+					return filename == "Left_StressPoints.png";
+				});
+				
+				var rightFootStress = Object.keys( unzip.files ).find( function ( filename ) {
+					return filename == "Right_StressPoints.png";
+				});
+				
+				document.getElementById("leftImageCOP").src = leftFootStress;
+				document.getElementById("rightImageCOP").src = rightFootStress;
 			});
-			
-			var rightFootStress = Object.keys( loader.files ).find( function ( filename ) {
-				return filename == "Right_StressPoints.png";
-			});
-			
-			document.getElementById("leftImageCOP").src = leftFootStress;
-			document.getElementById("rightImageCOP").src = rightFootStress;
+		
+			/*loader.on( 'load', function ( e ) {
+				var footImageLeft, footImageRight;
+					var leftFootStress = Object.keys( loader.files ).find( function ( filename ) {
+					return filename == "Left_StressPoints.png";
+				});
+				
+				var rightFootStress = Object.keys( loader.files ).find( function ( filename ) {
+					return filename == "Right_StressPoints.png";
+				});
+				
+				document.getElementById("leftImageCOP").src = leftFootStress;
+				document.getElementById("rightImageCOP").src = rightFootStress;
+			});*/
 		}
 		
 		function showCoPLine(){
