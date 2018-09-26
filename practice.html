@@ -373,7 +373,11 @@
 		  {
 			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
 			currentRightFrame = currentAutoFrame;
-			//get coordinates here
+			var coordinatesArray = copJSON.Right.COP_Points[currentAutoFrame - 1].split(",");
+			var x = parseInt(coordinatesArray[0]);
+			var y = parseInt(coordinatesArray[1]);
+			
+			console.log("rightImage: " + x + "," + y);
 		  }
 
 		  if( currentAutoFrame === maxFrame ) {
