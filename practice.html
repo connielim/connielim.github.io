@@ -248,11 +248,7 @@
 					maxRightFrames++;
 				}
 				else if (fileName == "CentersOfPressure.json"){
-					url = loader.extractAsJSON( fileName );
-					//copJSON = JSON.parse(url);
-					//console.log(copJSON);
-					console.log(url.Right);
-					//document.getElementById('derp').innerHTML = reader.readAsText(url);
+					copJSON = loader.extractAsJSON( fileName );
 				}
 				else{
 					var array = fileName.split('_');
@@ -366,7 +362,7 @@
 			currentLeftFrame = currentAutoFrame;
 			//get coordinates here
 			
-			//console.log("leftImage: " + );
+			console.log("leftImage: " + currentAutoFrame + ":" + copJSON.Left.COP_Points[currentAutoFrame - 1] );
 		  }
 
 		  if( currentAutoFrame <= maxRightFrames - 1 )
