@@ -243,13 +243,13 @@
 						maxLeftFrames++;
 						var url = loader.extractAsBlobUrl( fileName, 'image/png' );
 						var numberArray = array[array.length - 1].split('.');
-						console.log(parseInt(numberArray[0]));
 						leftIndivFrames[parseInt(numberArray[0])] = url;
 					}
 					else if(array.includes("RIGHT")){
 						maxRightFrames++;
 						var url = loader.extractAsBlobUrl( fileName, 'image/png' );
-						rightIndivFrames.push(url);
+						var numberArray = array[array.length - 1].split('.');
+						rightIndivFrames[parseInt(numberArray[0])] = url;
 					}
 					else if(array.includes("Left")){
 						if(array.includes("COPLine.png")){
@@ -380,14 +380,14 @@
 		  {
 			currentLeftFrame++;
 			document.getElementById("leftImage").src = leftIndivFrames[currentLeftFrame];
-			console.log(document.getElementById("leftImage").src);
 		  }
-
 		  if( currentRightFrame < maxRightFrames )
 		  {
 			currentRightFrame++;
 			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
 		  }
+		  
+		  console.log(currentLeftFrame + ' ' + currentRightFrame);
 		}
 		
 		function getTimingDiagrams(){
