@@ -246,7 +246,8 @@
 					maxRightFrames++;
 				}
 				else if (fileName == "CentersOfPressure.json"){
-					copJSON = JSON.parse(fileName);
+					url = loader.extractAsBlobUrl( fileName, 'text/plain' );
+					copJSON = JSON.parse(url);
 					console.log(copJSON);
 				}
 				else{
