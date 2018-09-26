@@ -227,20 +227,24 @@
 				if(fileName == "Step_1_LEFT_Frame_0.png"){
 					var url = loader.extractAsBlobUrl( fileName, 'image/png' );
 					document.getElementById("leftImage").src = url;
-					leftIndivFrames.push(url);
+					leftIndivFrames[0] = url;
+					maxLeftFrames++;
 				}
 				//right composite image
 				else if (fileName == "Step_1_RIGHT_Frame_0.png"){
 					url = loader.extractAsBlobUrl( fileName, 'image/png' );
 					document.getElementById("rightImage").src = url;
-					rightIndivFrames.push(url);
+					rightIndivFrame[0] = url;
+					maxRightFrames++;
 				}
 				else{
 					var array = fileName.split('_');
 					if(array.includes("LEFT")){
 						maxLeftFrames++;
 						var url = loader.extractAsBlobUrl( fileName, 'image/png' );
-						leftIndivFrames.push(url);
+						var numberArray = array[array.length - 1].split('.');
+						console.log(numberArray);
+						leftIndivFrames[] = url;
 					}
 					else if(array.includes("RIGHT")){
 						maxRightFrames++;
