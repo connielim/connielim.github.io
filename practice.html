@@ -243,8 +243,7 @@
 						maxLeftFrames++;
 						var url = loader.extractAsBlobUrl( fileName, 'image/png' );
 						var numberArray = array[array.length - 1].split('.');
-						console.log(numberArray);
-						//leftIndivFrames[] = url;
+						leftIndivFrames[parseInt(numberArray[0])] = url;
 					}
 					else if(array.includes("RIGHT")){
 						maxRightFrames++;
