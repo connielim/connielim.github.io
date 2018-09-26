@@ -216,6 +216,7 @@
 		var currentLeftFrame = 0;
 		var currentRightFrame = 0;
 		var currentAutoFrame = 1;
+		var maxFrame = 0;
 
         var loader = new ZipLoader('./response.zip');
 		
@@ -294,6 +295,7 @@
 			//setting the max frames 
 			document.getElementById("maxLeftFrame").innerHTML = maxLeftFrames - 1;
 			document.getElementById("maxRightFrame").innerHTML = maxRightFrames - 1;
+			maxFrame = Math.max(maxLeftFrames - 1, maxRightFrames - 1);
 		});
 		
 		function getPrevFrame(){
@@ -342,13 +344,13 @@
 			console.log("auto bump");
 		  var autoButton = document.getElementById("metascanAutoButton");
 
-		  if( currentAutoFrame <= maxLeftFrames )
+		  if( currentAutoFrame <= maxLeftFrames - 1 )
 		  {
 			document.getElementById("leftImage").src = leftIndivFrames[currentAutoFrame];
 			currentLeftFrame = currentAutoFrame;
 		  }
 
-		  if( currentAutoFrame <= maxRightFrames )
+		  if( currentAutoFrame <= maxRightFrames - 1 )
 		  {
 			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
 			currentRightFrame = currentAutoFrame;
@@ -376,12 +378,12 @@
 		}
 		
 		function getNextFrame(){
-		  if( currentLeftFrame < maxLeftFrames )
+		  if( currentLeftFrame < maxLeftFrames - 1 )
 		  {
 			currentLeftFrame++;
 			document.getElementById("leftImage").src = leftIndivFrames[currentLeftFrame];
 		  }
-		  if( currentRightFrame < maxRightFrames )
+		  if( currentRightFrame < maxRightFrames - 1 )
 		  {
 			currentRightFrame++;
 			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
