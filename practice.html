@@ -12,6 +12,7 @@
 </head>
 <body>
 	<button type="button" id="button">load 221KB ZIP and extract 495 images</button>
+	<p id="derp"></p>
 	
 	
 	<div class="container-fluid jumbotron div-show-hide testing">
@@ -250,6 +251,7 @@
 					//copJSON = JSON.parse(url);
 					//console.log(copJSON);
 					console.log(url);
+					document.getElementById('derp').innerHTML = url;
 				}
 				else{
 					var array = fileName.split('_');
