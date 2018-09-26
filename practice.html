@@ -362,7 +362,11 @@
 			currentLeftFrame = currentAutoFrame;
 			//get coordinates here
 			
-			console.log("leftImage: " + currentAutoFrame + ":" + copJSON.Left.COP_Points[currentAutoFrame - 1] );
+			var coordinatesArray = copJSON.Left.COP_Points[currentAutoFrame - 1].split(",");
+			var x = parseInt(coordinatesArray[0]);
+			var y = parseInt(coordinatesArray[1]);
+			
+			console.log("leftImage: " + x + "," + y);
 		  }
 
 		  if( currentAutoFrame <= maxRightFrames - 1 )
