@@ -335,6 +335,7 @@
 		
 		var bumpFrame = function()
 		{
+			console.log("auto bump");
 		  var autoButton = document.getElementById("metascanAutoButton");
 
 		  if( currentAutoFrame <= maxLeftFrames )
@@ -375,6 +376,7 @@
 		  {
 			currentLeftFrame++;
 			document.getElementById("leftImage").src = leftIndivFrames[currentLeftFrame];
+			console.log(document.getElementById("leftImage").src);
 		  }
 
 		  if( currentRightFrame < maxRightFrames )
