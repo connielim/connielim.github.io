@@ -223,6 +223,7 @@
 		var currentRightFrame = 0;
 		var currentAutoFrame = 1;
 		var maxFrame = 0;
+		var copJSON;
 
         var loader = new ZipLoader('./response.zip');
 		
@@ -243,6 +244,10 @@
 					document.getElementById("rightImage").src = url;
 					rightIndivFrames[0] = url;
 					maxRightFrames++;
+				}
+				else if (fileName == "CentersOfPressure.JSON"){
+					copJSON = JSON.parse(fileName);
+					console.log(copJSON);
 				}
 				else{
 					var array = fileName.split('_');
@@ -354,12 +359,16 @@
 		  {
 			document.getElementById("leftImage").src = leftIndivFrames[currentAutoFrame];
 			currentLeftFrame = currentAutoFrame;
+			//get coordinates here
+			
+			//console.log("leftImage: " + );
 		  }
 
 		  if( currentAutoFrame <= maxRightFrames - 1 )
 		  {
 			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
 			currentRightFrame = currentAutoFrame;
+			//get coordinates here
 		  }
 
 		  if( currentAutoFrame === maxFrame ) {
