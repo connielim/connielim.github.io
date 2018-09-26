@@ -213,6 +213,9 @@
 		var footImageCompositeLeft, footImageCompositeRight;
 		var leftIndivFrames = [];
 		var rightIndivFrames = [];
+		var currentLeftFrame = 0;
+		var currentRightFrame = 0;
+		var currentAutoFrame = 1;
 
         var loader = new ZipLoader('./response.zip');
 		
@@ -224,11 +227,13 @@
 				if(fileName == "Step_1_LEFT_Frame_0.png"){
 					var url = loader.extractAsBlobUrl( fileName, 'image/png' );
 					document.getElementById("leftImage").src = url;
+					leftIndivFrames.push(url);
 				}
 				//right composite image
 				else if (fileName == "Step_1_RIGHT_Frame_0.png"){
 					url = loader.extractAsBlobUrl( fileName, 'image/png' );
 					document.getElementById("rightImage").src = url;
+					rightIndivFrames.push(url);
 				}
 				else{
 					var array = fileName.split('_');
@@ -283,24 +288,100 @@
 			});
 			
 			//setting the max frames 
-			document.getElementById("maxLeftFrame").innerHTML = maxLeftFrames;
-			document.getElementById("maxRightFrame").innerHTML = maxRightFrames;
+			document.getElementById("maxLeftFrame").innerHTML = maxLeftFrames - 1;
+			document.getElementById("maxRightFrame").innerHTML = maxRightFrames - 1;
 		});
 		
 		function getPrevFrame(){
+		
+		  if( currentLeftFrame > 0 && currentRightFrame > 0 )
+		  {
+			if( currentLeftFrame > currentRightFrame )
+			  currentLeftFrame--;
+			else if( currentLeftFrame < currentRightFrame )
+			  currentRightFrame--;
+			else
+			{
+			  currentLeftFrame--;
+			  currentRightFrame--;
+			}
+		  }
+
+		  if( currentLeftFrame > 0 )
+		  {
+			document.getElementById("leftImage").src = leftIndivFrames[currentLeftFrame];
+		  }
+		  else
+		  {
+			document.getElementById("leftImage").src = leftIndivFrames[0];
+			currentLeftFrame = 0;
+		  }
+
+		  if( currentRightFrame > 0 )
+		  {
+			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
+		  }
+		  else
+		  {
+			document.getElementById("rightImage").src = rightIndivFrames[0];
+			currentRightFrame = 0;
+		  }
 			
 		}
         
 		function automateFrames(){
-		
+			intervalObject = setInterval( bumpFrame, 500 );
 		}
 		
-		function resetFrames(){
+		var bumpFrame = function()
+		{
+		  var autoButton = document.getElementById("metascanAutoButton");
+
+		  if( currentAutoFrame <= maxLeftFrames )
+		  {
+			document.getElementById("leftImage").src = leftIndivFrames[currentAutoFrame];
+			currentLeftFrame = currentAutoFrame;
+		  }
+
+		  if( currentAutoFrame <= maxRightFrames )
+		  {
+			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
+			currentRightFrame = currentAutoFrame;
+		  }
+
+		  if( currentAutoFrame === maxFrame ) {
+			clearInterval(intervalObject);
+			//autoPlayState = 0;
+			//autoButton.innerHTML = "Auto";
+			//$scope.showCurrentCOP = false;
+		  }
+		  currentAutoFrame++;
+
+		};
 		
+		function resetFrames(){
+		  document.getElementById("leftImage").src = leftIndivFrames[0];
+		  document.getElementById("rightImage").src = rightIndivFrames[0];
+		  currentAutoFrame = 1;
+		  if(intervalObject != null) {
+			clearInterval(intervalObject);
+		  }
+		  //var autoButton = document.getElementById("metascanAutoButton");
+		  //autoButton.innerHTML = "Auto";
 		}
 		
 		function getNextFrame(){
-		
+		  if( currentLeftFrame < maxLeftFrames )
+		  {
+			currentLeftFrame++;
+			document.getElementById("leftImage").src = leftIndivFrames[currentLeftFrame];
+		  }
+
+		  if( currentRightFrame < maxRightFrames )
+		  {
+			currentRightFrame++;
+			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
+		  }
 		}
 		
 		function getTimingDiagrams(){
