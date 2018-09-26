@@ -327,20 +327,24 @@
 
 		  if( currentLeftFrame > 0 )
 		  {
+			document.getElementById("currentLeftFrame").innerHTML = currentLeftFrame;
 			document.getElementById("leftImage").src = leftIndivFrames[currentLeftFrame];
 		  }
 		  else
 		  {
+		  document.getElementById("currentLeftFrame").innerHTML = 0;
 			document.getElementById("leftImage").src = leftIndivFrames[0];
 			currentLeftFrame = 0;
 		  }
 
 		  if( currentRightFrame > 0 )
 		  {
+			document.getElementById("currentRightFrame").innerHTML = currentRightFrame;
 			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
 		  }
 		  else
 		  {
+			document.getElementById("currentRightFrame").innerHTML = 0;
 			document.getElementById("rightImage").src = rightIndivFrames[0];
 			currentRightFrame = 0;
 		  }
@@ -353,11 +357,11 @@
 		
 		var bumpFrame = function()
 		{
-			console.log("auto bump");
 		  var autoButton = document.getElementById("metascanAutoButton");
 
 		  if( currentAutoFrame <= maxLeftFrames - 1 )
 		  {
+			document.getElementById("currentLeftFrame").innerHTML = currentAutoFrame;
 			document.getElementById("leftImage").src = leftIndivFrames[currentAutoFrame];
 			currentLeftFrame = currentAutoFrame;
 			//get coordinates here
@@ -371,6 +375,7 @@
 
 		  if( currentAutoFrame <= maxRightFrames - 1 )
 		  {
+			document.getElementById("currentRightFrame").innerHTML = currentAutoFrame;
 			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
 			currentRightFrame = currentAutoFrame;
 			var coordinatesArray = copJSON.Right.COP_Points[currentAutoFrame - 1].split(",");
@@ -391,6 +396,8 @@
 		};
 		
 		function resetFrames(){
+		  document.getElementById("currentLeftFrame").innerHTML = 0;
+		  document.getElementById("currentRightFrame").innerHTML = 0;
 		  document.getElementById("leftImage").src = leftIndivFrames[0];
 		  document.getElementById("rightImage").src = rightIndivFrames[0];
 		  currentAutoFrame = 1;
@@ -405,11 +412,13 @@
 		  if( currentLeftFrame < maxLeftFrames - 1 )
 		  {
 			currentLeftFrame++;
+			document.getElementById("currentLeftFrame").innerHTML = currentLeftFrame;
 			document.getElementById("leftImage").src = leftIndivFrames[currentLeftFrame];
 		  }
 		  if( currentRightFrame < maxRightFrames - 1 )
 		  {
 			currentRightFrame++;
+			document.getElementById("currentRightFrame").innerHTML = currentRightFrame;
 			document.getElementById("rightImage").src = rightIndivFrames[currentRightFrame];
 		  }
 		  
