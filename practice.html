@@ -225,6 +225,7 @@
 		var currentAutoFrame = 1;
 		var maxFrame = 0;
 		var copJSON;
+		var reader = new FileReader();
 
         var loader = new ZipLoader('./response.zip');
 		
@@ -251,7 +252,7 @@
 					//copJSON = JSON.parse(url);
 					//console.log(copJSON);
 					console.log(url);
-					document.getElementById('derp').innerHTML = url;
+					document.getElementById('derp').innerHTML = reader.readAsText(url);
 				}
 				else{
 					var array = fileName.split('_');
