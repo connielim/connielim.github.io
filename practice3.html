@@ -75,7 +75,7 @@
     <script type="text/javascript">
 		var sideCOPImageURL, copJSON;
 		var posturalImages = [];
-		var currentAutoFrame = 0;
+		var currentAutoFrame = -1;
 		
         var loader = new ZipLoader('./response2.zip');
 		
@@ -157,7 +157,7 @@
 		  //either stop or replay
 		  if(currentAutoFrame >= posturalImages.length - 1) {
 			if(document.getElementById('repeatReplayPostural').checked){
-			  currentAutoFrame = 0;
+			  currentAutoFrame = -1;
 			}
 			else{
 			  //autoPlayState = 0;
