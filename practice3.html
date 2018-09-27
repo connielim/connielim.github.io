@@ -136,12 +136,12 @@
 		  var rightCoordinatesArray = copJSON.Right_COP_Points[currentAutoFrame].split(",");
 		  var x = parseInt(rightCoordinatesArray[0]);
 		  var y = parseInt(rightCoordinatesArray[1]);
-		  console.log("right side: " + x + "," + y);
+		  ////////////////////////////////////console.log("right side: " + x + "," + y);
 		  
 		  var leftCoordinatesArray = copJSON.Left_COP_Points[currentAutoFrame].split(",");
 		  x = parseInt(leftCoordinatesArray[0]);
 		  y = parseInt(leftCoordinatesArray[1]);
-		  console.log("left side: " + x + "," + y);
+		  ///////////////////////////////////////console.log("left side: " + x + "," + y);
 		  
 		  if(document.getElementById("showSideCOP").checked){
 			document.getElementById("sideCOP").src = sideCOPImageURL;
@@ -165,8 +165,12 @@
 			  clearInterval(intervalObject);
 			  //$scope.showCurrentCOP = false;
 			  //$scope.showCoP = false;
+			  
+			  console.log("got to here");
 			}
 		  }
+		  
+		  console.log(currentAutoFrame);
 		  
 		  currentAutoFrame++;
 
