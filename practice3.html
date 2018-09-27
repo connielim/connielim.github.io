@@ -128,23 +128,6 @@
 		
 		var bumpFrame = function()
 		{
-		
-			//either stop or replay
-			console.log(currentAutoFrame + ' ' + (posturalImages.length - 1));
-		  if(currentAutoFrame >= (posturalImages.length - 1)) {
-			if(document.getElementById('repeatReplayPostural').checked){
-			  currentAutoFrame = 0;
-			}
-			else{
-			  //autoPlayState = 0;
-			  //document.getElementById("posturalPlayButton").innerHTML = "Play";
-			  clearInterval(intervalObject);
-			  //$scope.showCurrentCOP = false;
-			  //$scope.showCoP = false;
-			  
-			}
-		  }
-		  
 		  //relativePressureFrame = currentAutoFrame;
 		  document.getElementById("posturalSavedImage").src = posturalImages[currentAutoFrame];
 		  var percentage = (currentAutoFrame/posturalImages.length) * 100;
@@ -172,7 +155,23 @@
 		  //}
 		  
 		  currentAutoFrame++;
-
+			//either stop or replay
+			console.log(currentAutoFrame + ' ' + (posturalImages.length - 1));
+		  if(currentAutoFrame >= (posturalImages.length - 1)) {
+			if(document.getElementById('repeatReplayPostural').checked){
+			  currentAutoFrame = 0;
+			}
+			else{
+			  //autoPlayState = 0;
+			  //document.getElementById("posturalPlayButton").innerHTML = "Play";
+			  clearInterval(intervalObject);
+			  console.log("here");
+			  //$scope.showCurrentCOP = false;
+			  //$scope.showCoP = false;
+			  
+			}
+		  }
+		  
 		};
 		
 		function showScanParameterClicked(){
