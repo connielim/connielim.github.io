@@ -75,7 +75,7 @@
     <script type="text/javascript">
 		var sideCOPImageURL, copJSON;
 		var posturalImages = [];
-		var currentAutoFrame = -1;
+		var currentAutoFrame = 0;
 		
         var loader = new ZipLoader('./response2.zip');
 		
@@ -128,6 +128,22 @@
 		
 		var bumpFrame = function()
 		{
+		
+			//either stop or replay
+		  if(currentAutoFrame >= posturalImages.length - 1) {
+			if(document.getElementById('repeatReplayPostural').checked){
+			  currentAutoFrame = 0;
+			}
+			else{
+			  //autoPlayState = 0;
+			  //document.getElementById("posturalPlayButton").innerHTML = "Play";
+			  clearInterval(intervalObject);
+			  //$scope.showCurrentCOP = false;
+			  //$scope.showCoP = false;
+			  
+			}
+		  }
+		  
 		  //relativePressureFrame = currentAutoFrame;
 		  document.getElementById("posturalSavedImage").src = posturalImages[currentAutoFrame];
 		  var percentage = (currentAutoFrame/posturalImages.length) * 100;
@@ -153,24 +169,6 @@
 		  //if(posturalImageIsHovered){
 		//	BridgeMatInterface.getRelativePressure( currentDataStep, currentDataSide, relativePressureFrame, relativePressureX, relativePressureY, $scope.getRelativePressure_Callback );
 		  //}
-
-		  //either stop or replay
-		  if(currentAutoFrame >= posturalImages.length - 1) {
-			if(document.getElementById('repeatReplayPostural').checked){
-			  currentAutoFrame = -1;
-			}
-			else{
-			  //autoPlayState = 0;
-			  //document.getElementById("posturalPlayButton").innerHTML = "Play";
-			  clearInterval(intervalObject);
-			  //$scope.showCurrentCOP = false;
-			  //$scope.showCoP = false;
-			  
-			  console.log("got to here");
-			}
-		  }
-		  
-		  console.log(currentAutoFrame);
 		  
 		  currentAutoFrame++;
 
