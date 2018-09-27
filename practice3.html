@@ -19,9 +19,12 @@
           <div class="col-md-2"><p style="height: 420px;">&nbsp;</p></div>
           <div class="col-md-8">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-8" style="position: relative;">
                 <img id="posturalSavedImage" alt="Image not loaded!" onmouseleave="posturalImageNotHover()" onmouseover="setgetMousePositionOffsets()" onmousemove="getMousePosition($event)" style="width: 100%;">
-              </div>
+				<div class="col-md-12" style="position: absolute; top: 0; left: 0; z-index: 2;">
+					<img id="sideCOP" style="width: 100%;">
+				</div>
+			  </div>
               <div class="col-md-4">
                 <button onclick="playPosturalButtonPressed()" id="posturalPlayButton">Play</button><br>
                 <input type="checkbox" id="repeatReplayPostural" value="replay">Repeat Play<br>
@@ -71,17 +74,33 @@
       </div>
 
     <script type="text/javascript">
-
+		var sideCOPImageURL, copJSON;
+		var posturalImages = [];
+		var currentAutoFrame = 0;
+		
         var loader = new ZipLoader('./response2.zip');
 		
 		loader.load();
 		
 		loader.on( 'load', function ( e ) {
 			Object.keys(loader.files).forEach((fileName) => {
-				if(fileName == "StaticScan.png"){
-					var url = loader.extractAsBlobUrl( fileName, 'image/png' );
-					document.getElementById("staticSavedImage").src = url;
+				if(fileName == "CentersOfPressure.json"){
+					copJSON = loader.extractAsJSON( fileName );
 				}
+				else if (fileName == "SideCOPLines.png"){
+					var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+					sideCOPImageURL = url;
+				}
+				else{
+					var array = fileName.split('_');
+					if(array[0] == "Frame"){
+						var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+						var numberArray = array[array.length - 1].split('.');
+						posturalImages[parseInt(numberArray[0])] = url;
+					}
+				}	
+
+				document.getElementById("posturalSavedImage").src = posturalImages[posturalImages.length - 1];
 			});
 		});
 		
@@ -92,6 +111,42 @@
 		}
 		
 		function getMousePosition($event){
+		}
+		
+		function playPosturalButtonPressed(){
+			intervalObject = setInterval( bumpFrame, 20 );
+		}
+		
+		var bumpFrame = function()
+		{
+		  //relativePressureFrame = currentAutoFrame;
+		  document.getElementById("posturalSavedImage").src = posturalImages[currentAutoFrame];
+		  var percentage = (currentAutoFrame/posturalImages.length) * 100;
+		  $("#posturalProgressBar").css("width", Math.floor(percentage) + "%").attr("aria-valuenow", Math.floor(percentage));
+
+		  //if(posturalImageIsHovered){
+		//	BridgeMatInterface.getRelativePressure( currentDataStep, currentDataSide, relativePressureFrame, relativePressureX, relativePressureY, $scope.getRelativePressure_Callback );
+		  //}
+
+		  //either stop or replay
+		  if(currentAutoFrame >= posturalImages.length - 1) {
+			if(document.getElementById('repeatReplayPostural').checked){
+			  currentAutoFrame = 0;
+			}
+			else{
+			  //autoPlayState = 0;
+			  //document.getElementById("posturalPlayButton").innerHTML = "Play";
+			  clearInterval(intervalObject);
+			  //$scope.showCurrentCOP = false;
+			  //$scope.showCoP = false;
+			}
+		  }
+		  
+		  currentAutoFrame++;
+
+		};
+		
+		function showScanParameterClicked(){
 		}
 		
 		// on button click
