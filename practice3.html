@@ -63,7 +63,7 @@
                 <button>Graph</button><br>
                 Relative Pressure: <input type="text" class="relativePressure"><br>
                 <form>
-                  <input type="checkbox" name="name" id="showSideCOP" model="showSideCOP.name" checked="true" />Side COP
+                  <input type="checkbox" name="name" id="showSideCOP" model="showSideCOP.name" onclick="toggleSideCOP()" checked="true" />Side COP
                 </form>
               </div>
             </div>
@@ -115,6 +115,15 @@
 		
 		function playPosturalButtonPressed(){
 			intervalObject = setInterval( bumpFrame, 20 );
+		}
+		
+		function toggleSideCOP(){
+			if(document.getElementById("showSideCOP").checked){
+			  document.getElementById("sideCOP").src = sideCOPImageURL;
+			}
+			else{
+			  document.getElementById("sideCOP").src = "";
+			}
 		}
 		
 		var bumpFrame = function()
