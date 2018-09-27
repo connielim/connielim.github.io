@@ -125,13 +125,13 @@
 		  $("#posturalProgressBar").css("width", Math.floor(percentage) + "%").attr("aria-valuenow", Math.floor(percentage));
 		  
 		  var rightCoordinatesArray = copJSON.Right_COP_Points[currentAutoFrame].split(",");
-		  var x = parseInt(coordinatesArray[0]);
-		  var y = parseInt(coordinatesArray[1]);
+		  var x = parseInt(rightCoordinatesArray[0]);
+		  var y = parseInt(rightCoordinatesArray[1]);
 		  console.log("right side: " + x + "," + y);
 		  
 		  var leftCoordinatesArray = copJSON.Left_COP_Points[currentAutoFrame].split(",");
-		  x = parseInt(coordinatesArray[0]);
-		  y = parseInt(coordinatesArray[1]);
+		  x = parseInt(leftCoordinatesArray[0]);
+		  y = parseInt(leftCoordinatesArray[1]);
 		  console.log("left side: " + x + "," + y);
 
 		  //if(posturalImageIsHovered){
