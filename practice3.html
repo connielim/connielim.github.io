@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" src="jquery.js"></script> 
+	<script type="text/javascript" src="ZipLoader.js"></script>
+</head>
+<body>
+	<button type="button" id="button">load 221KB ZIP and extract 495 images</button>
+	<p id="derp"></p>
+	
+	<div class="container-fluid jumbotron div-show-hide" style="padding-top: 0px;">
+        <div class="row">
+          <div class="col-md-2"><p style="height: 420px;">&nbsp;</p></div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-8">
+                <img id="posturalSavedImage" alt="Image not loaded!" onmouseleave="posturalImageNotHover()" onmouseover="setgetMousePositionOffsets()" onmousemove="getMousePosition($event)" style="width: 100%;">
+              </div>
+              <div class="col-md-4">
+                <button onclick="playPosturalButtonPressed()" id="posturalPlayButton">Play</button><br>
+                <input type="checkbox" id="repeatReplayPostural" value="replay">Repeat Play<br>
+                <div class="progress">
+                  <div class="progress-bar" id="posturalProgressBar" role="progressbar" aria-valuenow ="0" aria-valuemin="0" aria-valuemax="100"
+                       style="width:0%; -webkit-transition: width 0.1s ease-in-out; -moz-transition: width 0.1s ease-in-out;-ms-transition: width 0.1s ease-in-out; -o-transition: width 0.1s ease-in-out; transition: width 0.1s ease-in-out;"></div>
+                </div>
+                <form>
+                    <fieldset>
+                        <legend>Show Both feet</legend>
+                        <div>
+                            <input type="radio" id="postural2D" name="staticSelectViewType" checked />
+                            <label for="static2D">2D</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="postural3D" name="staticSelectViewType" />
+                            <label for="static3D">3D</label>
+                        </div>
+                    </fieldset>
+                </form>
+                <button onclick="showScanParameterClicked()">Show Scan Parameters</button><br>
+                <form>
+                    <fieldset>
+                        <div>
+                            <input type="radio" id="posturalAPD" name="posturalSelectGraph" checked />
+                            <label for="posturalAPD">Antero-Posterior Dev.</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="posturalMLD" name="posturalSelectGraph" />
+                            <label for="posturalMLD">Medio-Lateral Dev.</label>
+                        </div>
+                    </fieldset>
+                </form>
+                <button>Graph</button><br>
+                <a type="button" class="btn btn-default btn-large" href="#/scan">Go Back</a><br>
+                Relative Pressure: <input type="text" class="relativePressure"><br>
+                <form>
+                  <input type="checkbox" name="name" model="showSideCOP.name" checked="true" />Side COP
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2"><p style="height: 420px;">&nbsp;</p></div>
+        </div>
+      </div>
+
+    <script type="text/javascript">
+
+        var loader = new ZipLoader('./response2.zip');
+		
+		loader.load();
+		
+		loader.on( 'load', function ( e ) {
+			Object.keys(loader.files).forEach((fileName) => {
+				if(fileName == "StaticScan.png"){
+					var url = loader.extractAsBlobUrl( fileName, 'image/png' );
+					document.getElementById("staticSavedImage").src = url;
+				}
+			});
+		});
+		
+		function posturalImageNotHover(){
+		}		
+		
+		function setgetMousePositionOffsets(){
+		}
+		
+		function getMousePosition($event){
+		}
+		
+		// on button click
+		/*document.getElementById( 'button' ).addEventListener( 'click', function ( e ) {
+			loader.load();
+			e.target.disabled = true;
+		} );*/
+
+
+    </script>
+
+
+</body>
+
+</html>
