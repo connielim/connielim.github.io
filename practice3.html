@@ -63,7 +63,7 @@
                 <button>Graph</button><br>
                 Relative Pressure: <input type="text" class="relativePressure"><br>
                 <form>
-                  <input type="checkbox" name="name" model="showSideCOP.name" checked="true" />Side COP
+                  <input type="checkbox" name="name" id="showSideCOP" model="showSideCOP.name" checked="true" />Side COP
                 </form>
               </div>
             </div>
@@ -133,6 +133,13 @@
 		  x = parseInt(leftCoordinatesArray[0]);
 		  y = parseInt(leftCoordinatesArray[1]);
 		  console.log("left side: " + x + "," + y);
+		  
+		  if(document.getElementById("showSideCOP").checked){
+			document.getElementById("sideCOP").src = sideCOPImageURL;
+		  }
+		  else{
+			document.getElementById("sideCOP").src = "";
+		  }
 
 		  //if(posturalImageIsHovered){
 		//	BridgeMatInterface.getRelativePressure( currentDataStep, currentDataSide, relativePressureFrame, relativePressureX, relativePressureY, $scope.getRelativePressure_Callback );
