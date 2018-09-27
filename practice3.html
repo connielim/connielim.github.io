@@ -61,7 +61,6 @@
                     </fieldset>
                 </form>
                 <button>Graph</button><br>
-                <a type="button" class="btn btn-default btn-large" href="#/scan">Go Back</a><br>
                 Relative Pressure: <input type="text" class="relativePressure"><br>
                 <form>
                   <input type="checkbox" name="name" model="showSideCOP.name" checked="true" />Side COP
@@ -90,6 +89,7 @@
 				else if (fileName == "SideCOPLines.png"){
 					var url = loader.extractAsBlobUrl( fileName, 'image/png' );
 					sideCOPImageURL = url;
+					document.getElementById("sideCOP").src = url;
 				}
 				else{
 					var array = fileName.split('_');
