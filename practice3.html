@@ -114,7 +114,7 @@
 		}
 		
 		function playPosturalButtonPressed(){
-			intervalObject = setInterval( bumpFrame, 20 );
+			intervalObject = setInterval( bumpFramePostural, 20 );
 		}
 		
 		function toggleSideCOP(){
@@ -126,7 +126,7 @@
 			}
 		}
 		
-		var bumpFrame = function()
+		var bumpFramePostural = function()
 		{
 		  //relativePressureFrame = currentAutoFrame;
 		  document.getElementById("posturalSavedImage").src = posturalImages[currentAutoFrame];
