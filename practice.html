@@ -226,28 +226,9 @@
 		var maxFrame = 0;
 		var copJSON;
 
-        //var loader = new ZipLoader('./response.zip');
+        var loader = new ZipLoader('./response.zip');
 		
-		ZipLoader.unzip( './response.zip' ).then( function ( unziped ) {
-
-			Object.keys( unziped.files ).forEach( ( fileName ) => {
-
-				if ( unziped.files[ fileName ].buffer.length === 0 ) return;
-
-				/*const $div = document.createElement( 'div' );
-				const $a = document.createElement( 'a' );
-				$a.textContent = fileName;
-				$a.href = unziped.extractAsBlobUrl( fileName, guessFileType( fileName ) );
-				$div.appendChild( $a );
-				document.body.appendChild( $div );*/
-				
-				console.log(fileName);
-
-			} );
-
-		} );
-		
-		/*loader.load();
+		loader.load();
 		
 		loader.on( 'load', function ( e ) {
 			Object.keys(loader.files).forEach((fileName) => {
@@ -326,7 +307,7 @@
 			document.getElementById("maxLeftFrame").innerHTML = maxLeftFrames - 1;
 			document.getElementById("maxRightFrame").innerHTML = maxRightFrames - 1;
 			maxFrame = Math.max(maxLeftFrames - 1, maxRightFrames - 1);
-		});*/
+		});
 		
 		function getPrevFrame(){
 		
