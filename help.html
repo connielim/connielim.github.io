@@ -35,7 +35,7 @@
                var fd = new FormData();
                fd.append('file', file);
             
-               $https:.post(uploadUrl, fd, {
+               $https:post(uploadUrl, fd, {
                   transformRequest: angular.identity,
                   headers: {'Content-Type': undefined}
                })
