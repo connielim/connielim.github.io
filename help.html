@@ -38,9 +38,11 @@ myApp.service('fileUpload', ['$http', function ($http) {
             transformRequest: angular.identity,
             headers: {'Content-Type': undefined}
         })
-        .success(function(){
+        .success(function(derp){
+		console.log("sucess:" + derp);
         })
-        .error(function(){
+        .error(function(merp){
+		console.log("bad: " + merp);
         });
     }
 }]);
