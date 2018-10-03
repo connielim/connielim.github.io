@@ -1,66 +1,62 @@
+
+<!DOCTYPE html>
 <html>
-   
-   <head>
-      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-   </head>
-   
-   <body ng-app = "myApp">
-	
-      <div ng-controller = "myCtrl">
-         <input type = "file" file-model = "myFile"/>
-         <button ng-click = "uploadFile()">upload me</button>
-      </div>
-      
-      <script>
-         var myApp = angular.module('myApp', []);
+<head>
+<meta charset="utf-8">
+<title>=^.^=</title>
+</head>
+<body>
+<h1>Select a zip file to extract</h1>
 
-myApp.directive('fileModel', ['$parse', function ($parse) {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            var model = $parse(attrs.fileModel);
-            var modelSetter = model.assign;
-            
-            element.bind('change', function(){
-                scope.$apply(function(){
-                    modelSetter(scope, element[0].files[0]);
-                });
-            });
-        }
-    };
-}]);
+select a zip file<br>
+<input id="select" type="file" accept=".zip"><br>
 
-myApp.service('fileUpload', ['$http', function ($http) {
-    this.uploadFileToUrl = function(file, uploadUrl){
-        var fd = new FormData();
-        fd.append('file', file);
-        $http.post(uploadUrl, fd, {
-            transformRequest: angular.identity,
-            headers: {'Content-Type': undefined}
-        })
-        .success(function(derp){
-		console.log("sucess:" + derp);
-        })
-        .error(function(merp){
-		console.log("bad: " + merp);
-        });
-    }
-}]);
+<script src="ZipLoader.js"></script>
+<script>
 
-myApp.controller('myCtrl', ['$scope', 'fileUpload', function($scope, fileUpload){
-    
-    $scope.uploadFile = function(){
-        var file = $scope.myFile;
-        console.log('file is ' );
-        console.dir(file);
-        var uploadUrl = "./";
-        fileUpload.uploadFileToUrl(file, uploadUrl);
-    };
-    
-}]);
+const $select = document.getElementById( 'select' );
 
-			
-      </script>
-      
-   </body>
+$select.addEventListener( 'change', function ( event ) {
+
+	const file0 = event.target.files[ 0 ];
+	console.log(file0);
+
+	ZipLoader.unzip( file0 ).then( function ( unziped ) {
+		console.log(unziped.files);
+
+		Object.keys( unziped.files ).forEach( ( fileName ) => {
+
+			if ( unziped.files[ fileName ].buffer.length === 0 ) return;
+
+			const $div = document.createElement( 'div' );
+			const $a = document.createElement( 'a' );
+			$a.textContent = fileName;
+			$a.href = unziped.extractAsBlobUrl( fileName, guessFileType( fileName ) );
+			$div.appendChild( $a );
+			document.body.appendChild( $div );
+
+		} );
+
+	} );
+
+} );
+
+function guessFileType( fileName ) {
+
+	return /\.jpeg$/i.test( fileName ) ? 'image/jpeg' :
+	       /\.png$/i  .test( fileName ) ? 'image/png'  :
+	       /\.gif$/i  .test( fileName ) ? 'image/gif'  :
+	       /\.txt$/i  .test( fileName ) ? 'text/plain' :
+	       /\.js$/i   .test( fileName ) ? 'text/plain' :
+	       /\.json$/i .test( fileName ) ? 'text/plain' :
+	       /\.html$/i .test( fileName ) ? 'text/plain' :
+	       /\.css$/i  .test( fileName ) ? 'text/plain' :
+	       /\.svg$/i  .test( fileName ) ? 'text/plain' :
+	       'application/octet-stream';
+
+}
+
+</script>
+
+</body>
 </html>
