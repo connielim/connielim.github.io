@@ -13,42 +13,14 @@ select a zip file<br>
 
 <script src="jszip.js"></script>
 <script>
-"use strict";
+JSZipUtils.getBinaryContent('https://github.com/connielim/connielim.github.io/blob/master/footImages.zip', function(err, data) {
+    if(err) {
+        throw err; // or handle err
+    }
 
-var http = require("http");
-var url = require("url");
-var JSZip = require("jszip");
-
-var req = http.get(url.parse("https://github.com/connielim/connielim.github.io/blob/master/footImages.zip"), function (res) {
-  if (res.statusCode !== 200) {
-    console.log(res.statusCode);
-    // handle error
-    return;
-  }
-  var data = [], dataLen = 0;
-
-  // don't set the encoding, it will break everything !
-  // or, if you must, set it to null. In that case the chunk will be a string.
-
-  res.on("data", function (chunk) {
-    data.push(chunk);
-    dataLen += chunk.length;
-  });
-
-  res.on("end", function () {
-    var buf = Buffer.concat(data);
-
-    // here we go !
-    JSZip.loadAsync(buf).then(function (zip) {
-      return zip.file("content.txt").async("string");
-    }).then(function (text) {
-      console.log(text);
+    JSZip.loadAsync(data).thenS(function () {
+        console.log(data);
     });
-  });
-});
-
-req.on("error", function(err){
-  // handle error
 });
 </script>
 
