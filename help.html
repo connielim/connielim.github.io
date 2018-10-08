@@ -11,10 +11,10 @@
 select a zip file<br>
 <input id="select" type="file" accept=".zip"><br>
 
-<script src="jszip.js"></script>
+<script type="text/javascript" src="jszip.js"></script>
+<script type="text/javascript" src="dist/jszip-utils.js"></script>
 <script>
-var zip = new JSZip();
-zip.getBinaryContent('https://github.com/connielim/connielim.github.io/blob/master/footImages.zip', function(err, data) {
+JSZipUtils.getBinaryContent('https://github.com/connielim/connielim.github.io/blob/master/footImages.zip', function(err, data) {
     if(err) {
         throw err; // or handle err
     }
