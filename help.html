@@ -13,7 +13,8 @@ select a zip file<br>
 
 <script src="jszip.js"></script>
 <script>
-JSZipUtils.getBinaryContent('https://github.com/connielim/connielim.github.io/blob/master/footImages.zip', function(err, data) {
+var zip = new JSZip();
+zip.getBinaryContent('https://github.com/connielim/connielim.github.io/blob/master/footImages.zip', function(err, data) {
     if(err) {
         throw err; // or handle err
     }
