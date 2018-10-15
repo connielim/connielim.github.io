@@ -369,6 +369,10 @@
 			var xCor = x * document.getElementById("leftImage").offsetWidth / document.getElementById("leftImage").naturalWidth;
 			var yCor = y * document.getElementById("leftImage").offsetWidth / document.getElementById("leftImage").naturalWidth;
 
+			console.log(currentAutoFrame - 1);
+			console.log(coordinatesArray);
+			console.log( x + "," + y);
+			
 			var c = document.getElementById("leftCanvas");
 			  var ctx = c.getContext("2d");
 			  ctx.clearRect(0, 0, c.width, c.height);
@@ -388,9 +392,6 @@
 			var x = parseInt(coordinatesArray[0]);
 			var y = parseInt(coordinatesArray[1]);
 			
-			console.log(currentAutoFrame - 1);
-			console.log(coordinatesArray);
-			console.log("rightImage: " + x + "," + y);
 		  }
 
 		  if( currentAutoFrame === maxFrame ) {
