@@ -16,7 +16,6 @@
 	
 	
 	<div class="container-fluid jumbotron div-show-hide testing">
-          <div class="col-md-5">
             <h3><label>Left Foot</label></h3>
 			<div class="col-md-12" style="position: relative;">
 				<img id="leftImage" alt="Image not loaded!" style="width: 100%;">
@@ -36,7 +35,6 @@
 					<canvas id="leftCanvas" style="width: 100%; height: 100%;"></canvas>
 				</div>
 			</div>
-          </div>
           <div class="col-md-2">
             <!--Step Number-->
             <!--Frame Number-->
@@ -304,7 +302,7 @@
 			});
 			
 			//setting the max frames 
-			document.getElementById("maxLeftFrame").innerHTML = maxLeftFrames - 1;
+			document.getElementById("maxLeftFrame").innerHTML =  - 1;
 			document.getElementById("maxRightFrame").innerHTML = maxRightFrames - 1;
 			maxFrame = Math.max(maxLeftFrames - 1, maxRightFrames - 1);
 		});
@@ -368,8 +366,17 @@
 			var coordinatesArray = copJSON.Left.COP_Points[currentAutoFrame - 1].split(",");
 			var x = parseInt(coordinatesArray[0]);
 			var y = parseInt(coordinatesArray[1]);
-			
-			console.log("leftImage: " + x + "," + y);
+			var xCor = x * document.getElementById("dynamicLeft").offsetWidth / document.getElementById("dynamicLeft").naturalWidth;
+			var yCor = y * document.getElementById("dynamicLeft").offsetWidth / document.getElementById("dynamicLeft").naturalWidth;
+
+			var c = document.getElementById("leftCanvas");
+			  var ctx = c.getContext("2d");
+			  ctx.clearRect(0, 0, c.width, c.height);
+			  ctx.beginPath();
+			  ctx.arc(x, y, 3, 0, 2 * Math.PI);
+			  ctx.fillStyle = "red";
+			  ctx.fill();
+
 		  }
 
 		  if( currentAutoFrame <= maxRightFrames - 1 )
