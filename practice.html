@@ -366,8 +366,8 @@
 			var coordinatesArray = copJSON.Left.COP_Points[currentAutoFrame - 1].split(",");
 			var x = parseInt(coordinatesArray[0]);
 			var y = parseInt(coordinatesArray[1]);
-			var xCor = x * document.getElementById("dynamicLeft").offsetWidth / document.getElementById("dynamicLeft").naturalWidth;
-			var yCor = y * document.getElementById("dynamicLeft").offsetWidth / document.getElementById("dynamicLeft").naturalWidth;
+			var xCor = x * document.getElementById("leftImage").offsetWidth / document.getElementById("leftImage").naturalWidth;
+			var yCor = y * document.getElementById("leftImage").offsetWidth / document.getElementById("leftImage").naturalWidth;
 
 			var c = document.getElementById("leftCanvas");
 			  var ctx = c.getContext("2d");
