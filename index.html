@@ -191,6 +191,27 @@
 			</div>
 		</div>
 		
+		<div id="vlogs" class="container-fluid new-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 title">
+						<h1 id="vlogs-title">Vlogs</h1>
+					</div>
+					<div class="col-md-12">
+						<div id="vlogVidContainer" class="col-md-4">
+							<iframe class="vlogVid" width="853" height="480" src="https://www.youtube.com/embed/_SaRSHTm-Is" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="col-md-4">
+							<iframe class="vlogVid" width="853" height="480" src="https://www.youtube.com/embed/Mz_8owRI-Jw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="col-md-4">
+							<iframe class="vlogVid" width="853" height="480" src="https://www.youtube.com/embed/MhNksVIo4Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<div id="hobbies" class="container-fluid new-container">
 			<div class="container">
 				<div class="row">
@@ -573,6 +594,9 @@
 					  }
 					}
 				  });
+				  
+				  $('.vlogVid').css('width', $('#vlogVidContainer').width() + 'px');
+				  $('.vlogVid').css('height', $('#vlogVidContainer').width()*0.57 + 'px');
 				
 				$( window ).resize(function() {
 					$('#main-black-cover').css('height', $('#main-cover-image').height() + 'px');
@@ -599,6 +623,9 @@
 						$('#sliders-cont').css('border-right', 'none');
 						$('#sliders-cont').css('border-width', '0px');
 					}
+					
+					$('.vlogVid').css('width', $('#vlogVidContainer').width() + 'px');
+					$('.vlogVid').css('height', $('#vlogVidContainer').width() * 0.57 + 'px');
 				});
 				
 				if($('.navbar').offset().top <= $('#main-cover-image').height()){

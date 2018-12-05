@@ -113,8 +113,15 @@
 	margin-top: 10px;
 }
 
-#hobbies{
+#vlogs{
 	background-color: #bfbfbf;
+}
+#vlogs-title{
+	margin-bottom: 30px;
+}
+
+#hobbies{
+	background-color: #5a6a72;
 	color: #fafafa;
 }
 .hobbies-icon{
@@ -127,14 +134,14 @@
 	transform: translate(0, -50%);
 }
 .hobbies-link, #hobbies-title{
-	color: #333;
+	color: #fafafa;
 }
 .hobbies-link:hover{
 	color: #004c8c;
 }
 #hobbies-list{
 	opacity: 0.85;
-	color: #333;
+	color: #fafafa;
 }
 /* End of Main Page */
 
